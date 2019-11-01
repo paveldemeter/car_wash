@@ -32,7 +32,7 @@ class CarsController < ApplicationController
     private
 
     def verify_editable
-        return if current_user.admin || current_user.owns_car?(Car.find(params[:id]))
+        return if current_user.owns_car?(Car.find(params[:id]))
 
         flash[:error] = 'You do not have permissions to edit this car!'
         redirect_to root_path
