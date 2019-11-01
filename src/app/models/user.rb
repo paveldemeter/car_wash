@@ -4,6 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :cars, foreign_key: 'owner_id'
+  has_many :cars, foreign_key: 'owner_id', dependent: :destroy
   has_one :car_cleaning, class_name: 'Car', foreign_key: 'cleaner_id'
+
+  def owns_car?(car)
+    cars.include?(car)
+  end
 end

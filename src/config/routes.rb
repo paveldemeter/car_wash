@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get 'pages/contact'
   get 'pages/pricing'
 
+  resources :cars
+
   # # shows all contacts
   # get 'contact', as: 'contact#index'
 
