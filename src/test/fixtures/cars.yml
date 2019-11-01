@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  car_id: 
+  model: MyString
+  make: MyString
+  rego: MyString
+  owner_user: one
+  cleaner_user: one
+
+two:
+  car_id: 
+  model: MyString
+  make: MyString
+  rego: MyString
+  owner_user: two
+  cleaner_user: two
