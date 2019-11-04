@@ -4,12 +4,12 @@
     <title>CarWash</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body back-ground:>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 
@@ -19,10 +19,13 @@
 
   <% end %>
 
-  <%= link_to 'Sign Out', destroy_user_session_path, method: 'delete' %>
-  <%= link_to 'Sign In', new_user_session_path %>
-  <%= link_to 'Sign Up', new_user_registration_path %>
-
     <%= yield %>
-  </body>
-</html>
+
+    <footer class="btmnav">
+  <div class="content has-text-centered">
+    <p>
+      <strong>Splash Auto Wash</strong> by <a href="https://paveldemeter.github.io/portfolio/index.html">Pavel Demeter</a>. The website content
+      is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Pavel Demeter ©</a>.
+    </p>
+  </div>
+</footer> 
