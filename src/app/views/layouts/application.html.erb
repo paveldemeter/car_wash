@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+  
     <title>CarWash</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,6 +13,62 @@
   <body back-ground:>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/homepage">
+      <img src="https://seeklogo.com/images/S/Splash-logo-F4F9BFE608-seeklogo.com.png" width="112" height="28">
+    </a>
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item">
+        Home
+      </a>
+
+      <a class="navbar-item">
+        About
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Washers
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item">
+            Report an issue
+          </a>
+          <a class="navbar-item">
+            Contact us 24/7
+          </a>
+          <hr class="navbar-divider">
+          <a class="navbar-item">
+            Information
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-success" <%= link_to 'Sign Up', new_user_registration_path %>
+          </a>
+          <a class="button is-info" <%= link_to 'Sign In', new_user_session_path %>
+          </a>
+          <a class="button is-warning" <%= link_to 'Sign Out', destroy_user_session_path, method: 'delete' %>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
 
   <% if flash[:error] %>
     <p class='error'><%= flash[:error] %></p>

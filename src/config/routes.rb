@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'pages#homepage'
   get 'pages/contact'
   get 'pages/pricing'
+  get 'pages/about'
 
   resources :cars
 
