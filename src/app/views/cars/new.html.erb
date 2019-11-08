@@ -1,0 +1,41 @@
+<br>
+<br>
+<div class="control columns is-centered">
+  <%= form_with model: @car, url: cars_path, method: 'post', local: true do |f| %>
+
+    <div class="field">
+        <%= f.label :price %><br />
+        $<%= f.number_field :price, value: params[:price].to_i/100.0, disabled: true  %>
+    </div>
+    
+
+    <div class="field">
+        <%= f.label :suburb %><br />
+        <%= f.text_field :suburb, autofocus: true %>
+    </div>
+
+    <div class="field">
+        <%= f.label :make %><br />
+        <%= f.text_field :make %>
+    </div>
+
+    <div class="field">
+        <%= f.label :model %><br />
+        <%= f.text_field :model %>
+    </div>
+
+    <div class="field">
+        <%= f.label :rego %><br />
+        <%= f.text_field :rego %>
+    </div>
+
+    <div class="field">
+        <%= f.label :year %><br />
+        <%= f.number_field :year %>
+    </div>
+
+    <div class="field">
+        <%= f.submit 'Make a new quote' %>
+    </div>
+  <% end %>
+</div>

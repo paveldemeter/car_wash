@@ -1,11 +1,22 @@
 Rails.application.routes.draw do
-  devise_for :users
+  get 'cars/index'
+  get 'cars/show'
+  get 'cars/edit'
+  get 'cars/new'
   root 'pages#homepage'
   get 'pages/contact'
   get 'pages/pricing'
   get 'pages/about'
+  get 'pages/washer'
+  get 'pages/checkout'
+  get 'pages/car_selection'
+
+  devise_for :users, controllers: {
+    registrations: 'user/registrations', only: [:create]
+  }
 
   resources :cars
+  resources :payments
 
   # # shows all contacts
   # get 'contact', as: 'contact#index'

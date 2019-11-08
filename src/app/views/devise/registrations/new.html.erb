@@ -1,5 +1,50 @@
-<h2>Sign up</h2>
 
+
+<h2>Sign up</h2>
+<div class='container'>
+<div class="timeline is-ctl">
+  <header class="timeline-header">
+    <span class="tag is-medium is-warning">Start</span>
+  </header>
+  <div class="timeline-item is-primary">
+    <div class="timeline-marker is-primary"></div>
+    <div class="timeline-content">
+      <p class="heading">Sign-up with Splash</p>
+      <p>Approval within 48 hours</p>
+    </div>
+  </div>
+  <div class="timeline-item is-info">
+    <div class="timeline-marker is-info is-image is-32x32">
+      <img src="http://bulma.io/images/placeholders/32x32.png">
+    </div>
+    <div class="timeline-content">
+      <p class="heading">Wait for Approval.</p>
+      <p><a class="button is-info is-loading">
+  Button
+</a></p>
+    </div>
+  </div>
+  <header class="timeline-header">
+    <span class="tag is-success is-medium is-outlined">Approved</span>
+  </header>
+  <div class="timeline-item is-danger">
+    <div class="timeline-marker is-danger is-icon">
+      <i class="fa fa-flag"></i>
+    </div>
+    <div class="timeline-content">
+      <p class="heading">Become Partners with Splash!</p>
+      <p>Start cleaning vehicles crystal clean</p>
+    </div>
+  </div>
+  <header class="timeline-header">
+    <span class="tag is-large is-primary">Recive</span>
+    <span class="tag is-large is-primary">Money!</span>
+  </header>
+</div>
+</div>
+<br/>
+<br/>
+<div class="center_form columns is-centered">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
@@ -21,9 +66,15 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
+  <p>
+    <%= f.label 'Driver Identification' %>
+    <%= f.file_field :photo_pic %>
+  </p>
+
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
 <% end %>
+</div>
 
 <%= render "devise/shared/links" %>

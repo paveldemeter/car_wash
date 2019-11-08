@@ -5,7 +5,6 @@ class CreateCars < ActiveRecord::Migration[5.2]
       t.string :make
       t.string :rego
       t.references :owner, foreign_key: {to_table: :users}
-      t.references :cleaner, foreign_key: {to_table: :users}
 
       t.timestamps
     end

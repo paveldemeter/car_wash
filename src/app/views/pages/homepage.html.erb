@@ -7,29 +7,37 @@
     <title>Document</title>
 </head>
 <body>
+<% if user_signed_in? %>
+  <% if current_user.photo_pic.attached? %>
+    <%= image_tag current_user.photo_pic, width: 120 %>
+  <% end %>
+  <p>Hello,<%= current_user.first_name %></p>
+<% end %>
     <div class="tile is-ancestor">
   <div class="tile is-vertical is-12">
     <div class="tile">
       <div class="tile is-parent is-vertical ">
-        <article class="tile is-child notification has-text-grey"><figure class="image is-3by1">
-            <img src="http://r70.cooltext.com/rendered/cooltext340415490814984.png">
-          </figure></article>
+        <article class="tile is-child notification has-background-white-ter	"></article>
         </article>
-        <article class="tile is-child notification has-text-grey">
-          <p class="subtitle">Want to become a detailer? Don't work for us?! Work with us!</p>
-        </article>
+        <article class="tile is-child notification has-background-white-ter	">
+          <p class="subtitle"><h1 class="title is-1 has-text-link" >Splash Auto Mobile Wash
       </div>
-      <div class="tile is-parent">
-        <article class="tile is-child notification has-text-grey">
+      <div class="tile is-parent has-background-white-ter	"><article class="tile is-child notification has-background-white-ter	"><img src="https://images.unsplash.com/photo-1565689876697-e467b6c54da2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" alt="Smiley face" height="420" width="420">
+      </article>
+        <article class="tile is-child notification has-background-white-ter	">
           <figure class="image is-4by3">
-            <img class=" is-rounded" src="https://images.unsplash.com/photo-1543857182-68106299b6b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80">
+        <div class="notification is-success">
+  <button  class="delete"></button>
+  Splash Auto Mobile Wash
+</div>
+<div class="notification is-info">
+  <button class="delete"></button>
+  Great for beginners
           </figure>
         </article>
       </div>
     </div>
-    <div class="tile is-parent ">
-      <article class="tile is-child notification has-text-grey"><p> $ SIGN UP NOW TO EARN MONEY $</p>
-      </article>
+    <div class="tile is-parent has-background-white-ter	">
     </div>
   </div>
     </article>

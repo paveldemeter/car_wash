@@ -10,79 +10,65 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body back-ground:>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-  <nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a class="navbar-item" href="/homepage">
-      <img src="https://seeklogo.com/images/S/Splash-logo-F4F9BFE608-seeklogo.com.png" width="112" height="28">
-    </a>
-    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-
-  <div id="navbarBasicExample" class="navbar-menu">
-    <div class="navbar-start">
-      <a class="navbar-item">
-        Home
-      </a>
-
-      <a class="navbar-item">
-        About
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          Washers
+  <body>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <%= link_to '<img src="https://seeklogo.com/images/S/Splash-logo-F4F9BFE608-seeklogo.com.png" width="112" height="28">'.html_safe, root_path, class: "navbar-item" %>
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
         </a>
+      </div>
 
-        <div class="navbar-dropdown">
-          <a class="navbar-item">
-            Report an issue
-          </a>
-          <a class="navbar-item">
-            Contact us 24/7
-          </a>
-          <hr class="navbar-divider">
-          <a class="navbar-item">
-            Information
-          </a>
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <%= link_to 'Price', pages_pricing_path, class: "navbar-item" %>
+          <%= link_to 'About', pages_about_path, class: "navbar-item" %>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              Washers
+            </a>
+
+            <div class="navbar-dropdown">
+              <%= link_to 'Washer', cars_path, class: "navbar-item" %>
+              <%= link_to 'Contact us 24/7', pages_contact_path, class: "navbar-item" %>
+              <hr class="navbar-divider">
+            </div>
+          </div>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <%= link_to 'Sign Up', new_user_registration_path, class: "button is-success" %>
+              <%= link_to 'Sign In', new_user_session_path, class: 'button is-info' %>
+              <%= link_to 'Sign Out', destroy_user_session_path, method: 'delete', class: 'button is-warning' %>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </nav>
 
-    <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="buttons">
-          <a class="button is-success" <%= link_to 'Sign Up', new_user_registration_path %>
-          </a>
-          <a class="button is-info" <%= link_to 'Sign In', new_user_session_path %>
-          </a>
-          <a class="button is-warning" <%= link_to 'Sign Out', destroy_user_session_path, method: 'delete' %>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</nav>
+    <% if flash[:error] %>
+      <p class='error'><%= flash[:error] %></p>
+    <% elsif flash[:success] %>
 
-  <% if flash[:error] %>
-    <p class='error'><%= flash[:error] %></p>
-  <% elsif flash[:success] %>
-
-  <% end %>
+    <% end %>
 
     <%= yield %>
 
-    <footer class="btmnav">
-  <div class="content has-text-centered">
-    <p>
-      <strong>Splash Auto Wash</strong> by <a href="https://paveldemeter.github.io/portfolio/index.html">Pavel Demeter</a>. The website content
-      is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Pavel Demeter ©</a>.
-    </p>
-  </div>
-</footer> 
+    <br />
+    <br />
+    <footer class="btmnav ">
+      <div class="content has-text-centered">
+        <p>
+          <strong>Splash Auto Wash</strong> by <a href="https://paveldemeter.github.io/portfolio/index.html">Pavel Demeter</a>. The website content
+          is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Pavel Demeter ©</a>.
+        </p>
+      </div>
+    </footer> 
+  </body>
+</html>

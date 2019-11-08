@@ -1,19 +1,18 @@
-    
 <table>
-  <thead>
-      <tr>
-        <td>model</td>
-        <td>make</td>
-        <td>rego</td>
-      </tr>
-  </thead>
-  <tbody>
-    <% @cars.each do |car| %>
-      <tr>
-        <td><%= car.model %></td>
-        <td><%= car.make %></td>
-        <td><%= car.rego %></td>
-      </tr>
-    <% end %>
-  </tbody>
+    <thead>
+        <tr>
+            <td>Model</td>
+            <td>Make</td>
+            <td>Rego</td>
+        </tr>
+    </thead>
+    <tbody>
+        <% @cars.each do |car| %>
+            <tr>
+                <td><%= car.model %></td>
+                <td><%= car.make %></td>
+                <td><%= car.rego %></td>
+            </tr>
+        <% end %>
+    </tbody>
 </table>
