@@ -24217,3 +24217,2321 @@ Processing by CarsController#new as HTML
 Completed 200 OK in 58ms (Views: 57.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2019-11-09 17:56:48 +1000
+  [1m[35m (6.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  [1m[36mUser Load (12.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (11.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 17], ["record_type", "User"], ["name", "photo_pic"], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  Rendered pages/homepage.html.erb within layouts/application (82.1ms)
+Completed 200 OK in 497ms (Views: 434.9ms | ActiveRecord: 50.3ms)
+
+
+Started GET "/pages/pricing" for ::1 at 2019-11-09 17:56:51 +1000
+Processing by PagesController#pricing as HTML
+  Rendering pages/pricing.html.erb within layouts/application
+  Rendered pages/pricing.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 36ms (Views: 34.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cars/new?price=6499" for ::1 at 2019-11-09 17:56:52 +1000
+Processing by CarsController#new as HTML
+  Parameters: {"price"=>"6499"}
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/new.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 74ms (Views: 54.4ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/cars/new?price=8499" for ::1 at 2019-11-09 17:56:55 +1000
+Processing by CarsController#new as HTML
+  Parameters: {"price"=>"8499"}
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 43ms (Views: 41.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cars/new?price=6499" for ::1 at 2019-11-09 17:56:58 +1000
+Processing by CarsController#new as HTML
+  Parameters: {"price"=>"6499"}
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 43ms (Views: 40.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cars" for ::1 at 2019-11-09 17:57:25 +1000
+Processing by CarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"srVIOjha68OSVBjmsMgrIvubx9o0248Yqy8lag3v6qrzhi7C4AEm+Jm+3l0PEBxVdUJ6zZ3rUJhKJY0YQLp55Q==", "car"=>{"suburb"=>"Neramg", "make"=>"Mercedes", "model"=>"Demeter", "rego"=>"708wrx", "year"=>"2012"}, "commit"=>"Make a new quote"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/cars_controller.rb:20
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cars_controller.rb:20
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/cars_controller.rb:20
+  [1m[36mCar Create (92.7ms)[0m  [1m[32mINSERT INTO "cars" ("model", "make", "rego", "owner_id", "created_at", "updated_at", "year", "suburb") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["model", "Demeter"], ["make", "Mercedes"], ["rego", "708wrx"], ["owner_id", 17], ["created_at", "2019-11-09 07:57:25.905084"], ["updated_at", "2019-11-09 07:57:25.905084"], ["year", 2012], ["suburb", "Neramg"]]
+  ↳ app/controllers/cars_controller.rb:20
+  [1m[35m (17.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/cars_controller.rb:20
+No template found for CarsController#create, rendering head :no_content
+Completed 204 No Content in 180ms (ActiveRecord: 111.0ms)
+
+
+Started GET "/cars" for ::1 at 2019-11-09 17:59:02 +1000
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:10
+  Rendered cars/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 59ms (Views: 56.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/pages/about" for ::1 at 2019-11-09 17:59:11 +1000
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 33ms (Views: 31.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cars" for ::1 at 2019-11-09 17:59:12 +1000
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:10
+  Rendered cars/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 39ms (Views: 37.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 17:59:13 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 17], ["record_type", "User"], ["name", "photo_pic"], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  Rendered pages/homepage.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 43ms (Views: 39.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/pages/pricing" for ::1 at 2019-11-09 17:59:14 +1000
+Processing by PagesController#pricing as HTML
+  Rendering pages/pricing.html.erb within layouts/application
+  Rendered pages/pricing.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 45ms (Views: 43.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 17:59:16 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 17], ["record_type", "User"], ["name", "photo_pic"], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  Rendered pages/homepage.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 55ms (Views: 51.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 17:59:19 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 17], ["record_type", "User"], ["name", "photo_pic"], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  Rendered pages/homepage.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 52ms (Views: 49.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 17:59:20 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 17], ["record_type", "User"], ["name", "photo_pic"], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  Rendered pages/homepage.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 52ms (Views: 49.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 17:59:21 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 17], ["record_type", "User"], ["name", "photo_pic"], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  Rendered pages/homepage.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 76ms (Views: 73.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/pages/pricing" for ::1 at 2019-11-09 17:59:21 +1000
+Processing by PagesController#pricing as HTML
+  Rendering pages/pricing.html.erb within layouts/application
+  Rendered pages/pricing.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 32ms (Views: 30.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/about" for ::1 at 2019-11-09 17:59:22 +1000
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 32ms (Views: 31.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 17:59:23 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 17], ["record_type", "User"], ["name", "photo_pic"], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  Rendered pages/homepage.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 40ms (Views: 37.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/cars" for ::1 at 2019-11-09 17:59:24 +1000
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:10
+  Rendered cars/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 36ms (Views: 34.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pages/contact" for ::1 at 2019-11-09 17:59:25 +1000
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 33ms (Views: 30.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 17:59:26 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 17], ["record_type", "User"], ["name", "photo_pic"], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  Rendered pages/homepage.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 39ms (Views: 36.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-11-09 17:59:27 +1000
+Processing by User::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 17:59:27 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 17], ["record_type", "User"], ["name", "photo_pic"], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  Rendered pages/homepage.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 62ms (Views: 59.7ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2019-11-09 17:59:29 +1000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"S7qzPjSs7zEigI92DVeCxkAvwPfqTnpO8wUeG3Z2M/O26aJBRxhZ3o9rvtBYQkaIBT2NEL0qBDntiQ80v6MQAQ=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 17:59:29 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  Rendered pages/homepage.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 44ms (Views: 42.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-11-09 17:59:31 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 44ms (Views: 42.0ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2019-11-09 17:59:32 +1000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ftkUJcPljwB0/lCggD0t9Z7Zr/T4zwafpN6eRrLWkU4n/jP5D2Bofi7q86XKwJzcu52IOXMarFpoCSdVoFsrUQ=="}
+Redirected to http://localhost:3000/
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 17:59:32 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  Rendered pages/homepage.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 34ms (Views: 32.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cars" for ::1 at 2019-11-09 17:59:33 +1000
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:10
+  Rendered cars/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 35ms (Views: 32.4ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2019-11-09 17:59:35 +1000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"TqhXmqYFTdePPHM2S2zb58qJZPALC0W19yMFqYy9jEcXj3BGaoCqqdUo0DMBkWrO781DPYDe73A79Ly6njA2WA=="}
+Redirected to http://localhost:3000/
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 17:59:35 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  Rendered pages/homepage.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 32ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cars" for ::1 at 2019-11-09 17:59:37 +1000
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:10
+  Rendered cars/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 35ms (Views: 32.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pages/pricing" for ::1 at 2019-11-09 17:59:38 +1000
+Processing by PagesController#pricing as HTML
+  Rendering pages/pricing.html.erb within layouts/application
+  Rendered pages/pricing.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 58ms (Views: 56.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cars/new?price=6499" for ::1 at 2019-11-09 17:59:39 +1000
+Processing by CarsController#new as HTML
+  Parameters: {"price"=>"6499"}
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 36ms (Views: 33.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/cars" for ::1 at 2019-11-09 17:59:40 +1000
+Processing by CarsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"giZc4RKY58YuT0Nl4zmycJrIaollvCr+M1oorhV04Jfeds4Iu5d/TP0IfnqeYji6ZyDWjhji+9YN5t76L81/Xg==", "car"=>{"suburb"=>"", "make"=>"", "model"=>"", "rego"=>"", "year"=>""}, "commit"=>"Make a new quote"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `cars' for nil:NilClass
+Did you mean?  case):
+  
+app/controllers/cars_controller.rb:20:in `create'
+Started GET "/pages/about" for ::1 at 2019-11-09 17:59:43 +1000
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 34ms (Views: 32.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cars" for ::1 at 2019-11-09 17:59:45 +1000
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:10
+  Rendered cars/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 38ms (Views: 36.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pages/contact" for ::1 at 2019-11-09 17:59:46 +1000
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 37ms (Views: 35.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 17:59:47 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  Rendered pages/homepage.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 56ms (Views: 55.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/contact" for ::1 at 2019-11-09 17:59:48 +1000
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 34ms (Views: 32.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/contact" for ::1 at 2019-11-09 17:59:54 +1000
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 37ms (Views: 34.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cars" for ::1 at 2019-11-09 17:59:55 +1000
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:10
+  Rendered cars/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 41ms (Views: 38.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/pages/contact" for ::1 at 2019-11-09 17:59:57 +1000
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 34ms (Views: 32.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/about" for ::1 at 2019-11-09 17:59:58 +1000
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 34ms (Views: 33.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-11-09 18:00:00 +1000
+Processing by User::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.7ms)
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 53ms (Views: 52.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-11-09 18:00:10 +1000
+Processing by User::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.6ms)
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 62ms (Views: 61.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-11-09 18:00:11 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2019-11-09 18:00:12 +1000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"yL9/u523BKWymzdf37RjAmpCP8gLVsh/Wjp5iuF1yzWRmFhnUTLj2+iPlFqVSdIrTwYYBYCDYrqW7cCZ8/hxKg=="}
+Redirected to http://localhost:3000/
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 18:00:12 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  Rendered pages/homepage.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 34ms (Views: 33.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 18:00:16 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  Rendered pages/homepage.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cars" for ::1 at 2019-11-09 18:00:18 +1000
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:10
+  Rendered cars/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 37ms (Views: 34.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 18:00:43 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  Rendered pages/homepage.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 38ms (Views: 36.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 18:01:00 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  Rendered pages/homepage.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 35ms (Views: 33.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/pricing" for ::1 at 2019-11-09 18:01:02 +1000
+Processing by PagesController#pricing as HTML
+  Rendering pages/pricing.html.erb within layouts/application
+  Rendered pages/pricing.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 33ms (Views: 32.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cars/new?price=6499" for ::1 at 2019-11-09 18:01:03 +1000
+Processing by CarsController#new as HTML
+  Parameters: {"price"=>"6499"}
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 106ms (Views: 103.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-11-09 18:01:08 +1000
+Processing by User::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.6ms)
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 40ms (Views: 39.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-11-09 18:01:56 +1000
+Processing by User::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nCbyYqQyRt0nuchgj/NxRdPYW6QqU3xSAuyKjBvcULh6vKxiyrTevS6Y62TMmBIJYPPVahwVwmEmz6E/9e4Ebg==", "user"=>{"email"=>"taco@hotmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "photo_pic"=>#<ActionDispatch::Http::UploadedFile:0x00007fda855a3338 @tempfile=#<Tempfile:/var/folders/ds/rk_y765d7hv2ls3_hl7l6cjm0000gn/T/RackMultipart20191109-17478-1e4gl21.jpeg>, @original_filename="download.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[photo_pic]\"; filename=\"download.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Sign up"}
+Unpermitted parameter: :photo_pic
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "taco@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "taco@hotmail.com"], ["encrypted_password", "$2a$11$xK4Y2ampRXfhMf71FgkJVe7w2QM7do71AbDZv8s8Ny3FG.0KqFsuS"], ["created_at", "2019-11-09 08:01:56.985889"], ["updated_at", "2019-11-09 08:01:56.985889"]]
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+Redirected to http://localhost:3000/
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 19], ["record_type", "User"], ["name", "photo_pic"], ["LIMIT", 1]]
+  ↳ app/controllers/user/registrations_controller.rb:34
+[36m  Disk Storage (1.6ms) [0m[32mUploaded file to key: rx3EMrDtsEjq8Pa7JQGh5pQJ (checksum: HGYGy1IFlLNNIVAEVh1Hcg==)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user/registrations_controller.rb:34
+  [1m[36mActiveStorage::Blob Create (0.6ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "rx3EMrDtsEjq8Pa7JQGh5pQJ"], ["filename", "download.jpeg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 6494], ["checksum", "HGYGy1IFlLNNIVAEVh1Hcg=="], ["created_at", "2019-11-09 08:01:57.032699"]]
+  ↳ app/controllers/user/registrations_controller.rb:34
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user/registrations_controller.rb:34
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user/registrations_controller.rb:34
+  [1m[36mActiveStorage::Attachment Create (0.9ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "photo_pic"], ["record_type", "User"], ["record_id", 19], ["blob_id", 3], ["created_at", "2019-11-09 08:01:57.050657"]]
+  ↳ app/controllers/user/registrations_controller.rb:34
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1 WHERE "users"."id" = $2[0m  [["updated_at", "2019-11-09 08:01:57.052568"], ["id", 19]]
+  ↳ app/controllers/user/registrations_controller.rb:34
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user/registrations_controller.rb:34
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: c66599ee-b16b-4ed7-938d-5005feaf6cdc) to Async(default) with arguments: #<GlobalID:0x00007fda85758b10 @uri=#<URI::GID gid://car-wash/ActiveStorage::Blob/3>>
+  [1m[35m (3.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user/registrations_controller.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user/registrations_controller.rb:35
+Completed 302 Found in 250ms (ActiveRecord: 23.9ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 18:01:57 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 19], ["record_type", "User"], ["name", "photo_pic"], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  Rendered pages/homepage.html.erb within layouts/application (7.4ms)
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c66599ee-b16b-4ed7-938d-5005feaf6cdc] Performing ActiveStorage::AnalyzeJob (Job ID: c66599ee-b16b-4ed7-938d-5005feaf6cdc) from Async(default) with arguments: #<GlobalID:0x00007fda87049638 @uri=#<URI::GID gid://car-wash/ActiveStorage::Blob/3>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c66599ee-b16b-4ed7-938d-5005feaf6cdc] [36m  Disk Storage (0.3ms) [0m[34mDownloaded file from key: rx3EMrDtsEjq8Pa7JQGh5pQJ[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c66599ee-b16b-4ed7-938d-5005feaf6cdc] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c66599ee-b16b-4ed7-938d-5005feaf6cdc]   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c66599ee-b16b-4ed7-938d-5005feaf6cdc]   ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c66599ee-b16b-4ed7-938d-5005feaf6cdc]   [1m[36mActiveStorage::Blob Update (0.8ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 3]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c66599ee-b16b-4ed7-938d-5005feaf6cdc]   ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c66599ee-b16b-4ed7-938d-5005feaf6cdc]   [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c66599ee-b16b-4ed7-938d-5005feaf6cdc]   ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [c66599ee-b16b-4ed7-938d-5005feaf6cdc] Performed ActiveStorage::AnalyzeJob (Job ID: c66599ee-b16b-4ed7-938d-5005feaf6cdc) from Async(default) in 19.1ms
+Completed 200 OK in 56ms (Views: 53.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a77636aafd9e77632dc2cf4e9b6fd6517239b62b/download.jpeg" for ::1 at 2019-11-09 18:01:57 +1000
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a77636aafd9e77632dc2cf4e9b6fd6517239b62b", "filename"=>"download"}
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (1.3ms) [0m[34mGenerated URL for file at key: rx3EMrDtsEjq8Pa7JQGh5pQJ (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRjbmd6UlUxeVJIUnpSV3B4T0ZCaE4wcFJSMmcxY0ZGS0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlaRzkzYm14dllXUXVhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHOTNibXh2WVdRdWFuQmxad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDE5LTExLTA5VDA4OjA2OjU3LjIxNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a7a6da0093c1b47d075ba9b3304478960f98ad16/download.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22download.jpeg%22%3B+filename%2A%3DUTF-8%27%27download.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRjbmd6UlUxeVJIUnpSV3B4T0ZCaE4wcFJSMmcxY0ZGS0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlaRzkzYm14dllXUXVhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHOTNibXh2WVdRdWFuQmxad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDE5LTExLTA5VDA4OjA2OjU3LjIxNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a7a6da0093c1b47d075ba9b3304478960f98ad16/download.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22download.jpeg%22%3B+filename%2A%3DUTF-8%27%27download.jpeg
+Completed 302 Found in 7ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRjbmd6UlUxeVJIUnpSV3B4T0ZCaE4wcFJSMmcxY0ZGS0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlaRzkzYm14dllXUXVhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHOTNibXh2WVdRdWFuQmxad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDE5LTExLTA5VDA4OjA2OjU3LjIxNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a7a6da0093c1b47d075ba9b3304478960f98ad16/download.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22download.jpeg%22%3B+filename%2A%3DUTF-8%27%27download.jpeg" for ::1 at 2019-11-09 18:01:57 +1000
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"download.jpeg\"; filename*=UTF-8''download.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRjbmd6UlUxeVJIUnpSV3B4T0ZCaE4wcFJSMmcxY0ZGS0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlaRzkzYm14dllXUXVhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHOTNibXh2WVdRdWFuQmxad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDE5LTExLTA5VDA4OjA2OjU3LjIxNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a7a6da0093c1b47d075ba9b3304478960f98ad16", "filename"=>"download"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/about" for ::1 at 2019-11-09 18:02:00 +1000
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 36ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 18:02:00 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 19], ["record_type", "User"], ["name", "photo_pic"], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  Rendered pages/homepage.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 76ms (Views: 73.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/cars" for ::1 at 2019-11-09 18:02:03 +1000
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:10
+  Rendered cars/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 37ms (Views: 35.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pages/contact" for ::1 at 2019-11-09 18:02:04 +1000
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 38ms (Views: 36.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 18:02:05 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 19], ["record_type", "User"], ["name", "photo_pic"], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  Rendered pages/homepage.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 44ms (Views: 41.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 18:02:08 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 19], ["record_type", "User"], ["name", "photo_pic"], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  Rendered pages/homepage.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 38ms (Views: 35.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRjbmd6UlUxeVJIUnpSV3B4T0ZCaE4wcFJSMmcxY0ZGS0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlaRzkzYm14dllXUXVhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHOTNibXh2WVdRdWFuQmxad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDE5LTExLTA5VDA4OjA2OjU3LjIxNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a7a6da0093c1b47d075ba9b3304478960f98ad16/download.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22download.jpeg%22%3B+filename%2A%3DUTF-8%27%27download.jpeg" for ::1 at 2019-11-09 18:02:09 +1000
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"download.jpeg\"; filename*=UTF-8''download.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRjbmd6UlUxeVJIUnpSV3B4T0ZCaE4wcFJSMmcxY0ZGS0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlaRzkzYm14dllXUXVhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHOTNibXh2WVdRdWFuQmxad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDE5LTExLTA5VDA4OjA2OjU3LjIxNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a7a6da0093c1b47d075ba9b3304478960f98ad16", "filename"=>"download"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/pricing" for ::1 at 2019-11-09 18:02:11 +1000
+Processing by PagesController#pricing as HTML
+  Rendering pages/pricing.html.erb within layouts/application
+  Rendered pages/pricing.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 33ms (Views: 31.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 18:02:11 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 19], ["record_type", "User"], ["name", "photo_pic"], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  Rendered pages/homepage.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 44ms (Views: 41.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/pages/pricing" for ::1 at 2019-11-09 18:02:14 +1000
+Processing by PagesController#pricing as HTML
+  Rendering pages/pricing.html.erb within layouts/application
+  Rendered pages/pricing.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 57ms (Views: 56.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/about" for ::1 at 2019-11-09 18:02:16 +1000
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 33ms (Views: 31.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cars" for ::1 at 2019-11-09 18:02:17 +1000
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.6ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:10
+  Rendered cars/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 37ms (Views: 34.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pages/pricing" for ::1 at 2019-11-09 18:02:19 +1000
+Processing by PagesController#pricing as HTML
+  Rendering pages/pricing.html.erb within layouts/application
+  Rendered pages/pricing.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 36ms (Views: 34.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/contact" for ::1 at 2019-11-09 18:02:20 +1000
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 33ms (Views: 31.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-11-09 18:02:22 +1000
+Processing by User::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 18:02:22 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 19], ["record_type", "User"], ["name", "photo_pic"], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  Rendered pages/homepage.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 38ms (Views: 35.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-11-09 18:02:23 +1000
+Processing by User::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 18:02:23 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 19], ["record_type", "User"], ["name", "photo_pic"], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  Rendered pages/homepage.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 58ms (Views: 55.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 18:02:25 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 19], ["record_type", "User"], ["name", "photo_pic"], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  Rendered pages/homepage.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 42ms (Views: 38.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 18:04:14 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 19], ["record_type", "User"], ["name", "photo_pic"], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  Rendered pages/homepage.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 40ms (Views: 37.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRjbmd6UlUxeVJIUnpSV3B4T0ZCaE4wcFJSMmcxY0ZGS0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlaRzkzYm14dllXUXVhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHOTNibXh2WVdRdWFuQmxad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDE5LTExLTA5VDA4OjA2OjU3LjIxNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a7a6da0093c1b47d075ba9b3304478960f98ad16/download.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22download.jpeg%22%3B+filename%2A%3DUTF-8%27%27download.jpeg" for ::1 at 2019-11-09 18:04:14 +1000
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"download.jpeg\"; filename*=UTF-8''download.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRjbmd6UlUxeVJIUnpSV3B4T0ZCaE4wcFJSMmcxY0ZGS0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlaRzkzYm14dllXUXVhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHOTNibXh2WVdRdWFuQmxad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDE5LTExLTA5VDA4OjA2OjU3LjIxNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a7a6da0093c1b47d075ba9b3304478960f98ad16", "filename"=>"download"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2019-11-09 18:04:17 +1000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"IZ4Pv/ssNTAIzTjCBpftiQMYRiB1LBcWawXXYa//dXp4uShjN6nSTlLZm8dMalygJlxh7f75vdOn0m5yvXLPZQ=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 18:04:17 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  Rendered pages/homepage.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-11-09 18:04:27 +1000
+Processing by User::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 40ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-11-09 18:04:37 +1000
+Processing by User::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MkD73qLKPyHaFo7tfXAlZRADfBiO8o4UqTYfcJsKVT4+KC9Ajzty4ywi+51B/ILdKfrdHV9/9W9kdtKjHXwr9Q==", "user"=>{"email"=>"steven@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "photo_pic"=>#<ActionDispatch::Http::UploadedFile:0x00007fda7f8163a0 @tempfile=#<Tempfile:/var/folders/ds/rk_y765d7hv2ls3_hl7l6cjm0000gn/T/RackMultipart20191109-17478-1rxab34.jpeg>, @original_filename="download.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[photo_pic]\"; filename=\"download.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Sign up"}
+Unpermitted parameter: :photo_pic
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "steven@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "steven@gmail.com"], ["encrypted_password", "$2a$11$PG0aicyyK5cTzxKiwdGkgeCHqFyM82IlmOYHPsJInwE9LdkfSZTx."], ["created_at", "2019-11-09 08:04:37.978003"], ["updated_at", "2019-11-09 08:04:37.978003"]]
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+Redirected to http://localhost:3000/
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 20], ["record_type", "User"], ["name", "photo_pic"], ["LIMIT", 1]]
+  ↳ app/controllers/user/registrations_controller.rb:34
+[36m  Disk Storage (1.3ms) [0m[32mUploaded file to key: LKW25cS1qLcmmeut3b8ND5Md (checksum: HGYGy1IFlLNNIVAEVh1Hcg==)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user/registrations_controller.rb:34
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "LKW25cS1qLcmmeut3b8ND5Md"], ["filename", "download.jpeg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 6494], ["checksum", "HGYGy1IFlLNNIVAEVh1Hcg=="], ["created_at", "2019-11-09 08:04:37.987599"]]
+  ↳ app/controllers/user/registrations_controller.rb:34
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user/registrations_controller.rb:34
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user/registrations_controller.rb:34
+  [1m[36mActiveStorage::Attachment Create (0.8ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "photo_pic"], ["record_type", "User"], ["record_id", 20], ["blob_id", 4], ["created_at", "2019-11-09 08:04:37.996093"]]
+  ↳ app/controllers/user/registrations_controller.rb:34
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1 WHERE "users"."id" = $2[0m  [["updated_at", "2019-11-09 08:04:37.997895"], ["id", 20]]
+  ↳ app/controllers/user/registrations_controller.rb:34
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user/registrations_controller.rb:34
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 21e45fa3-9094-44a3-a0b3-1483e8fed03b) to Async(default) with arguments: #<GlobalID:0x00007fda86962130 @uri=#<URI::GID gid://car-wash/ActiveStorage::Blob/4>>
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user/registrations_controller.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user/registrations_controller.rb:35
+Completed 302 Found in 173ms (ActiveRecord: 16.5ms)
+
+
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [21e45fa3-9094-44a3-a0b3-1483e8fed03b] Performing ActiveStorage::AnalyzeJob (Job ID: 21e45fa3-9094-44a3-a0b3-1483e8fed03b) from Async(default) with arguments: #<GlobalID:0x00007fda869826b0 @uri=#<URI::GID gid://car-wash/ActiveStorage::Blob/4>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [21e45fa3-9094-44a3-a0b3-1483e8fed03b] [36m  Disk Storage (0.1ms) [0m[34mDownloaded file from key: LKW25cS1qLcmmeut3b8ND5Md[0m
+Started GET "/" for ::1 at 2019-11-09 18:04:38 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 20], ["record_type", "User"], ["name", "photo_pic"], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  Rendered pages/homepage.html.erb within layouts/application (6.3ms)
+[ActiveJob] [ActiveStorage::AnalyzeJob] [21e45fa3-9094-44a3-a0b3-1483e8fed03b] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [21e45fa3-9094-44a3-a0b3-1483e8fed03b]   [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [21e45fa3-9094-44a3-a0b3-1483e8fed03b]   ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [21e45fa3-9094-44a3-a0b3-1483e8fed03b]   [1m[36mActiveStorage::Blob Update (2.3ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 4]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [21e45fa3-9094-44a3-a0b3-1483e8fed03b]   ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [21e45fa3-9094-44a3-a0b3-1483e8fed03b]   [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [21e45fa3-9094-44a3-a0b3-1483e8fed03b]   ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [21e45fa3-9094-44a3-a0b3-1483e8fed03b] Performed ActiveStorage::AnalyzeJob (Job ID: 21e45fa3-9094-44a3-a0b3-1483e8fed03b) from Async(default) in 50.75ms
+Completed 200 OK in 53ms (Views: 50.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--cfc226a791263c3c067175e9dfccc84bd3168634/download.jpeg" for ::1 at 2019-11-09 18:04:38 +1000
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--cfc226a791263c3c067175e9dfccc84bd3168634", "filename"=>"download"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: LKW25cS1qLcmmeut3b8ND5Md (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRURXRYTWpWalV6RnhUR050YldWMWRETmlPRTVFTlUxa0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlaRzkzYm14dllXUXVhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHOTNibXh2WVdRdWFuQmxad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDE5LTExLTA5VDA4OjA5OjM4LjExNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f842fb0d068d05a73c45b97b67456c9ead79fe32/download.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22download.jpeg%22%3B+filename%2A%3DUTF-8%27%27download.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRURXRYTWpWalV6RnhUR050YldWMWRETmlPRTVFTlUxa0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlaRzkzYm14dllXUXVhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHOTNibXh2WVdRdWFuQmxad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDE5LTExLTA5VDA4OjA5OjM4LjExNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f842fb0d068d05a73c45b97b67456c9ead79fe32/download.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22download.jpeg%22%3B+filename%2A%3DUTF-8%27%27download.jpeg
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRURXRYTWpWalV6RnhUR050YldWMWRETmlPRTVFTlUxa0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlaRzkzYm14dllXUXVhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHOTNibXh2WVdRdWFuQmxad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDE5LTExLTA5VDA4OjA5OjM4LjExNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f842fb0d068d05a73c45b97b67456c9ead79fe32/download.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22download.jpeg%22%3B+filename%2A%3DUTF-8%27%27download.jpeg" for ::1 at 2019-11-09 18:04:38 +1000
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"download.jpeg\"; filename*=UTF-8''download.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRURXRYTWpWalV6RnhUR050YldWMWRETmlPRTVFTlUxa0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlaRzkzYm14dllXUXVhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHOTNibXh2WVdRdWFuQmxad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDE5LTExLTA5VDA4OjA5OjM4LjExNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f842fb0d068d05a73c45b97b67456c9ead79fe32", "filename"=>"download"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 18:04:59 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 20], ["record_type", "User"], ["name", "photo_pic"], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  Rendered pages/homepage.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 56ms (Views: 54.1ms | ActiveRecord: 0.9ms)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4862635681502691960)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4862635681502691960)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2019-11-09 18:11:06 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 20], ["record_type", "User"], ["name", "photo_pic"], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  Rendered pages/homepage.html.erb within layouts/application (58.3ms)
+Completed 200 OK in 95ms (Views: 78.2ms | ActiveRecord: 15.1ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--cfc226a791263c3c067175e9dfccc84bd3168634/download.jpeg" for ::1 at 2019-11-09 18:11:06 +1000
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--cfc226a791263c3c067175e9dfccc84bd3168634", "filename"=>"download"}
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.8ms) [0m[34mGenerated URL for file at key: LKW25cS1qLcmmeut3b8ND5Md (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRURXRYTWpWalV6RnhUR050YldWMWRETmlPRTVFTlUxa0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlaRzkzYm14dllXUXVhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHOTNibXh2WVdRdWFuQmxad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDE5LTExLTA5VDA4OjE2OjA2LjIzM1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--89e258c1b125baecc37e6781cc65072c981cbea9/download.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22download.jpeg%22%3B+filename%2A%3DUTF-8%27%27download.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRURXRYTWpWalV6RnhUR050YldWMWRETmlPRTVFTlUxa0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlaRzkzYm14dllXUXVhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHOTNibXh2WVdRdWFuQmxad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDE5LTExLTA5VDA4OjE2OjA2LjIzM1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--89e258c1b125baecc37e6781cc65072c981cbea9/download.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22download.jpeg%22%3B+filename%2A%3DUTF-8%27%27download.jpeg
+Completed 302 Found in 5ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRURXRYTWpWalV6RnhUR050YldWMWRETmlPRTVFTlUxa0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlaRzkzYm14dllXUXVhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHOTNibXh2WVdRdWFuQmxad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDE5LTExLTA5VDA4OjE2OjA2LjIzM1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--89e258c1b125baecc37e6781cc65072c981cbea9/download.jpeg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22download.jpeg%22%3B+filename%2A%3DUTF-8%27%27download.jpeg" for ::1 at 2019-11-09 18:11:06 +1000
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"download.jpeg\"; filename*=UTF-8''download.jpeg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRURXRYTWpWalV6RnhUR050YldWMWRETmlPRTVFTlUxa0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlaRzkzYm14dllXUXVhbkJsWnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblpHOTNibXh2WVdRdWFuQmxad1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRDJsdFlXZGxMMnB3WldjR093WlUiLCJleHAiOiIyMDE5LTExLTA5VDA4OjE2OjA2LjIzM1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--89e258c1b125baecc37e6781cc65072c981cbea9", "filename"=>"download"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4862635681502691960)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4862635681502691960)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started DELETE "/users/sign_out" for ::1 at 2019-11-09 18:14:08 +1000
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cLaNef/3hH9ilnKvYmEB6TGz4XUzDg8B9d24UA546dhTdXZBg1CHElOhC56MChvnkxparcudogRxfhz98QMCqg=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 38ms (ActiveRecord: 5.9ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 18:14:09 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  Rendered pages/homepage.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 362ms (Views: 360.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 18:14:11 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  Rendered pages/homepage.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 34ms (Views: 33.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-11-09 18:14:13 +1000
+Processing by User::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 47ms (Views: 46.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-11-09 18:14:27 +1000
+Processing by User::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WeY4Ncbtc6m0/DZnU+kJkIblE4nSBtkB7lIhu07lbrPW5Uc4O4hMmCGR/JaefuRjkST3DTkI6pw88ESK6/As6Q==", "user"=>{"email"=>"poop@poop.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "photo_pic"=>#<ActionDispatch::Http::UploadedFile:0x00007fa779620548 @tempfile=#<Tempfile:/var/folders/ds/rk_y765d7hv2ls3_hl7l6cjm0000gn/T/RackMultipart20191109-18093-13wlq3r.jpeg>, @original_filename="download.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[photo_pic]\"; filename=\"download.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Sign up"}
+Unpermitted parameter: :photo_pic
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "poop@poop.com"], ["LIMIT", 1]]
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.0ms)
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.4ms)
+Completed 500 Internal Server Error in 195ms (Views: 40.1ms | ActiveRecord: 1.4ms)
+
+
+  
+NoMethodError (undefined method `photo_pic' for nil:NilClass):
+  
+app/controllers/user/registrations_controller.rb:34:in `create'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4862635681502691960)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4862635681502691960)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started POST "/users" for ::1 at 2019-11-09 18:16:48 +1000
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by User::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WeY4Ncbtc6m0/DZnU+kJkIblE4nSBtkB7lIhu07lbrPW5Uc4O4hMmCGR/JaefuRjkST3DTkI6pw88ESK6/As6Q==", "user"=>{"email"=>"poop@poop.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "photo_pic"=>#<ActionDispatch::Http::UploadedFile:0x00007ff0f3cd7d00 @tempfile=#<Tempfile:/var/folders/ds/rk_y765d7hv2ls3_hl7l6cjm0000gn/T/RackMultipart20191109-18239-1odnes9.jpeg>, @original_filename="download.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[photo_pic]\"; filename=\"download.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Sign up"}
+Unpermitted parameter: :photo_pic
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "poop@poop.com"], ["LIMIT", 1]]
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.9ms)
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (11.4ms)
+Completed 500 Internal Server Error in 559ms (Views: 369.4ms | ActiveRecord: 6.0ms)
+
+
+  
+NoMethodError (undefined method `photo_pic' for nil:NilClass):
+  
+app/controllers/user/registrations_controller.rb:34:in `create'
+Started GET "/" for ::1 at 2019-11-09 18:16:52 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  Rendered pages/homepage.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 56ms (Views: 54.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-11-09 18:16:55 +1000
+Processing by User::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 43ms (Views: 42.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-11-09 18:17:06 +1000
+Processing by User::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vGid1h2CC8+0K37cJ91ja9MFDmKq1AtIVo2AuN+j6KAza+Lb4Oc0/iFGtC3qSo6YxMTq5kHaONWEL+WJeraq+g==", "user"=>{"email"=>"pavel@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007ff0f8c0dcd0 @tempfile=#<Tempfile:/var/folders/ds/rk_y765d7hv2ls3_hl7l6cjm0000gn/T/RackMultipart20191109-18239-aqx1sa.jpeg>, @original_filename="download.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"download.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Sign up"}
+Unpermitted parameter: :image
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "pavel@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.8ms)
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.6ms)
+Completed 500 Internal Server Error in 188ms (Views: 37.1ms | ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `photo_pic' for nil:NilClass):
+  
+app/controllers/user/registrations_controller.rb:34:in `create'
+Started POST "/__web_console/repl_sessions/166e4d1340bc3f14717b73c579d2811b/trace" for ::1 at 2019-11-09 18:17:48 +1000
+Started POST "/users" for ::1 at 2019-11-09 18:18:29 +1000
+Processing by User::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vGid1h2CC8+0K37cJ91ja9MFDmKq1AtIVo2AuN+j6KAza+Lb4Oc0/iFGtC3qSo6YxMTq5kHaONWEL+WJeraq+g==", "user"=>{"email"=>"pavel@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007ff0fa1bacb8 @tempfile=#<Tempfile:/var/folders/ds/rk_y765d7hv2ls3_hl7l6cjm0000gn/T/RackMultipart20191109-18239-fmfcv4.jpeg>, @original_filename="download.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"download.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Sign up"}
+Unpermitted parameter: :image
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "pavel@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.0ms)
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.3ms)
+Completed 500 Internal Server Error in 209ms (Views: 42.6ms | ActiveRecord: 4.6ms)
+
+
+  
+NoMethodError (undefined method `photo_pic' for nil:NilClass):
+  
+app/controllers/user/registrations_controller.rb:34:in `create'
+Started GET "/" for ::1 at 2019-11-09 18:18:33 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  Rendered pages/homepage.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 35ms (Views: 33.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-11-09 18:18:34 +1000
+Processing by User::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.8ms)
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 42ms (Views: 41.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-11-09 18:18:44 +1000
+Processing by User::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zVIUN823mZk5mAHIOhgM9LYjDzC+s3eXMJifiychYBpCUWs6MNKmqKz1yzn3j+EHoeLrtFW9RAriOvq6gjQiQA==", "user"=>{"email"=>"pave@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007ff0f91f2bc8 @tempfile=#<Tempfile:/var/folders/ds/rk_y765d7hv2ls3_hl7l6cjm0000gn/T/RackMultipart20191109-18239-1j2rrk5.jpeg>, @original_filename="download.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"download.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Sign up"}
+Unpermitted parameter: :image
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "pave@mail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.8ms)
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.1ms)
+Completed 500 Internal Server Error in 194ms (Views: 40.2ms | ActiveRecord: 0.9ms)
+
+
+  
+NoMethodError (undefined method `photo_pic' for nil:NilClass):
+  
+app/controllers/user/registrations_controller.rb:34:in `create'
+Started POST "/users" for ::1 at 2019-11-09 18:19:56 +1000
+Processing by User::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zVIUN823mZk5mAHIOhgM9LYjDzC+s3eXMJifiychYBpCUWs6MNKmqKz1yzn3j+EHoeLrtFW9RAriOvq6gjQiQA==", "user"=>{"email"=>"pave@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007ff0f3fe29f0 @tempfile=#<Tempfile:/var/folders/ds/rk_y765d7hv2ls3_hl7l6cjm0000gn/T/RackMultipart20191109-18239-1xc2mm5.jpeg>, @original_filename="download.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"download.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Sign up"}
+Unpermitted parameter: :image
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "pave@mail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.9ms)
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.1ms)
+Completed 500 Internal Server Error in 206ms (Views: 41.4ms | ActiveRecord: 4.5ms)
+
+
+  
+NoMethodError (undefined method `image' for nil:NilClass):
+  
+app/controllers/user/registrations_controller.rb:34:in `create'
+Started POST "/users" for ::1 at 2019-11-09 18:20:06 +1000
+Processing by User::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yea1cMNt7xgvJGJ4hMULimF2s2zaf2JHRez//btmkmwJ0xFWXG7Ddjs5QnSNSFCtaUvK0ViMecWptZYVX07ahw==", "user"=>{"email"=>"pave2@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007ff0f92a0908 @tempfile=#<Tempfile:/var/folders/ds/rk_y765d7hv2ls3_hl7l6cjm0000gn/T/RackMultipart20191109-18239-3rz2hb.jpeg>, @original_filename="download.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"download.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Sign up"}
+Unpermitted parameter: :image
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "pave2@mail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.9ms)
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.6ms)
+Completed 500 Internal Server Error in 195ms (Views: 38.9ms | ActiveRecord: 0.8ms)
+
+
+  
+NoMethodError (undefined method `image' for nil:NilClass):
+  
+app/controllers/user/registrations_controller.rb:34:in `create'
+Started POST "/users" for ::1 at 2019-11-09 18:20:40 +1000
+Processing by User::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yea1cMNt7xgvJGJ4hMULimF2s2zaf2JHRez//btmkmwJ0xFWXG7Ddjs5QnSNSFCtaUvK0ViMecWptZYVX07ahw==", "user"=>{"email"=>"pave2@mail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007ff0f907ade0 @tempfile=#<Tempfile:/var/folders/ds/rk_y765d7hv2ls3_hl7l6cjm0000gn/T/RackMultipart20191109-18239-2g45p9.jpeg>, @original_filename="download.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"download.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Sign up"}
+Unpermitted parameter: :image
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "pave2@mail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.9ms)
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.4ms)
+Completed 500 Internal Server Error in 192ms (Views: 42.8ms | ActiveRecord: 0.9ms)
+
+
+  
+NoMethodError (undefined method `image' for nil:NilClass):
+  
+app/controllers/user/registrations_controller.rb:34:in `create'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4862635681502691960)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4862635681502691960)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2019-11-09 18:23:44 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  Rendered pages/homepage.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 59ms (Views: 57.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-11-09 18:23:46 +1000
+Processing by User::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.6ms)
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 59ms (Views: 42.1ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/users" for ::1 at 2019-11-09 18:24:01 +1000
+Processing by User::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uCgfPUMyfJ6Wu/Mf+VgEKh9MdMI9Xrih/xPJNdIjOtY3K2AwvldDrwPWOe40z+nZCI2QRtZQizwtsawEdzZ4jA==", "user"=>{"email"=>"taco@ke.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007ff0f90b94f0 @tempfile=#<Tempfile:/var/folders/ds/rk_y765d7hv2ls3_hl7l6cjm0000gn/T/RackMultipart20191109-18239-1sgqwtk.jpeg>, @original_filename="download.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"download.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Sign up"}
+Unpermitted parameter: :image
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "taco@ke.com"], ["LIMIT", 1]]
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "taco@ke.com"], ["encrypted_password", "$2a$11$juV06fhrMsklDyeB0OL.q.ahPzL5LrWlN8sxGqAcGVkWiqMtyXnc6"], ["created_at", "2019-11-09 08:24:01.709435"], ["updated_at", "2019-11-09 08:24:01.709435"]]
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+Redirected to http://localhost:3000/
+Completed 500 Internal Server Error in 156ms (ActiveRecord: 1.8ms)
+
+
+  
+NoMethodError (undefined method `image' for #<User:0x00007ff0f90e0c58>):
+  
+app/controllers/user/registrations_controller.rb:34:in `create'
+Started POST "/users" for ::1 at 2019-11-09 18:24:54 +1000
+Processing by User::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uCgfPUMyfJ6Wu/Mf+VgEKh9MdMI9Xrih/xPJNdIjOtY3K2AwvldDrwPWOe40z+nZCI2QRtZQizwtsawEdzZ4jA==", "user"=>{"email"=>"taco@ke.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007ff0f36df9c0 @tempfile=#<Tempfile:/var/folders/ds/rk_y765d7hv2ls3_hl7l6cjm0000gn/T/RackMultipart20191109-18239-1vqf85z.jpeg>, @original_filename="download.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"download.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Sign up"}
+Unpermitted parameter: :image
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "taco@ke.com"], ["LIMIT", 1]]
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.0ms)
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.2ms)
+Completed 500 Internal Server Error in 226ms (Views: 62.7ms | ActiveRecord: 4.8ms)
+
+
+  
+NoMethodError (undefined method `image' for nil:NilClass):
+  
+app/controllers/user/registrations_controller.rb:34:in `create'
+Started GET "/" for ::1 at 2019-11-09 18:24:56 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  Rendered pages/homepage.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 43ms (Views: 41.3ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4862635681502691960)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4862635681502691960)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/users/sign_up" for ::1 at 2019-11-09 18:25:13 +1000
+Processing by User::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 56ms (Views: 36.9ms | ActiveRecord: 4.1ms)
+
+
+Started POST "/users" for ::1 at 2019-11-09 18:25:30 +1000
+Processing by User::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3wtV1h5iXqrEz72XPdqOM5+BTqwERdAm4tNaePhp8CZQCCrb4wdhm1Gid2bwTWPAiECqKO9L47swcT9JXXyyfA==", "user"=>{"email"=>"pajdos@hotmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007ff0f3785f78 @tempfile=#<Tempfile:/var/folders/ds/rk_y765d7hv2ls3_hl7l6cjm0000gn/T/RackMultipart20191109-18239-gc129o.jpeg>, @original_filename="download.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"download.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Sign up"}
+Unpermitted parameter: :image
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "pajdos@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "pajdos@hotmail.com"], ["encrypted_password", "$2a$11$Kj3.o.rYTDzE4iX29i1.OuyTr96hBV6wysrtTJxvE4tRl3gQfj6kW"], ["created_at", "2019-11-09 08:25:30.832859"], ["updated_at", "2019-11-09 08:25:30.832859"]]
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+Redirected to http://localhost:3000/
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 22], ["record_type", "User"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/user/registrations_controller.rb:34
+Completed 500 Internal Server Error in 216ms (ActiveRecord: 4.1ms)
+
+
+  
+NameError (Cannot load `Rails.config.active_storage.service`:
+uninitialized constant Cloudinary):
+  
+app/controllers/user/registrations_controller.rb:34:in `create'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4862635681502691960)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4862635681502691960)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2019-11-09 18:27:07 +1000
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  Rendered pages/homepage.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 445ms (Views: 434.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-11-09 18:27:08 +1000
+Processing by User::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.6ms)
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 67ms (Views: 48.0ms | ActiveRecord: 6.2ms)
+
+
+Started POST "/users" for ::1 at 2019-11-09 18:27:23 +1000
+Processing by User::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mKksiYmm1GSMwVOZ/98Vx2zNsIhn0mPvNq3o7g3NaT0XqlOEdMPrVRmsmWgySPg0ewxUDIzcUHLkD43fqNgrZw==", "user"=>{"email"=>"paj23dos@hotmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007fb1c3ac74a8 @tempfile=#<Tempfile:/var/folders/ds/rk_y765d7hv2ls3_hl7l6cjm0000gn/T/RackMultipart20191109-18566-nnutj8.jpeg>, @original_filename="download.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"download.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Sign up"}
+Unpermitted parameter: :image
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "paj23dos@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "paj23dos@hotmail.com"], ["encrypted_password", "$2a$11$d6t.B0yZ4FF4cBJFsxYkGOZP9ql20WjCIe5GFP8TJPhxpXbaeO1Oa"], ["created_at", "2019-11-09 08:27:24.146579"], ["updated_at", "2019-11-09 08:27:24.146579"]]
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+Redirected to http://localhost:3000/
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 23], ["record_type", "User"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/user/registrations_controller.rb:34
+Completed 500 Internal Server Error in 171ms (ActiveRecord: 4.9ms)
+
+
+  
+NameError (Cannot load `Rails.config.active_storage.service`:
+uninitialized constant Cloudinary):
+  
+app/controllers/user/registrations_controller.rb:34:in `create'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4862635681502691960)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(4862635681502691960)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2019-11-09 18:33:20 +1000
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  Rendered pages/homepage.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 451ms (Views: 442.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-11-09 18:33:22 +1000
+Processing by User::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.6ms)
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 67ms (Views: 48.5ms | ActiveRecord: 5.4ms)
+
+
+Started POST "/users" for ::1 at 2019-11-09 18:33:43 +1000
+Processing by User::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mn1VC853FL9F87ugSomJwMKXYNtRwrMbIGzQludoRN0VfioGMxIrjtCecVGHHmQz1VaEX7rMgIbyzrWnQn0Ghw==", "user"=>{"email"=>"steve@gmaiil.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007fca493d2c58 @tempfile=#<Tempfile:/var/folders/ds/rk_y765d7hv2ls3_hl7l6cjm0000gn/T/RackMultipart20191109-18890-8ck5jr.jpeg>, @original_filename="download.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"download.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Sign up"}
+Unpermitted parameter: :image
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "steve@gmaiil.com"], ["LIMIT", 1]]
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.2ms)
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.0ms)
+Completed 500 Internal Server Error in 197ms (Views: 41.2ms | ActiveRecord: 1.5ms)
+
+
+  
+NoMethodError (undefined method `image' for nil:NilClass):
+  
+app/controllers/user/registrations_controller.rb:34:in `create'
+Started POST "/users" for ::1 at 2019-11-09 18:37:05 +1000
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by User::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mn1VC853FL9F87ugSomJwMKXYNtRwrMbIGzQludoRN0VfioGMxIrjtCecVGHHmQz1VaEX7rMgIbyzrWnQn0Ghw==", "user"=>{"email"=>"steve@gmaiil.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007fde2921cc08 @tempfile=#<Tempfile:/var/folders/ds/rk_y765d7hv2ls3_hl7l6cjm0000gn/T/RackMultipart20191109-19006-1fxd2z.jpeg>, @original_filename="download.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"download.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Sign up"}
+Unpermitted parameter: :image
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "steve@gmaiil.com"], ["LIMIT", 1]]
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.0ms)
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (10.6ms)
+Completed 500 Internal Server Error in 561ms (Views: 372.9ms | ActiveRecord: 6.3ms)
+
+
+  
+NoMethodError (undefined method `image' for nil:NilClass):
+  
+app/controllers/user/registrations_controller.rb:34:in `create'
+Started GET "/" for ::1 at 2019-11-09 18:37:07 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  Rendered pages/homepage.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 63ms (Views: 61.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-11-09 18:37:09 +1000
+Processing by User::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.1ms)
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 41ms (Views: 40.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-11-09 18:37:19 +1000
+Processing by User::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oJk45SKXOGjX+6RjMOEw6HISWNHQXU01aBrQh7jQnNYvmkfo3/IHWUKWbpL9dt0bZdO8VTtTfqi6uLW2HcXejA==", "user"=>{"email"=>"paveldemeter@hotmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "photo_id"=>#<ActionDispatch::Http::UploadedFile:0x00007fde2f0b0580 @tempfile=#<Tempfile:/var/folders/ds/rk_y765d7hv2ls3_hl7l6cjm0000gn/T/RackMultipart20191109-19006-6zkjkh.jpeg>, @original_filename="download.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[photo_id]\"; filename=\"download.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Sign up"}
+Unpermitted parameter: :photo_id
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "paveldemeter@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "paveldemeter@hotmail.com"], ["encrypted_password", "$2a$11$HiWw6swDdqyNn6Rhc6riPeJepI.42ie4LIUNkNt/K/cQWEm3ws5Gq"], ["created_at", "2019-11-09 08:37:19.782563"], ["updated_at", "2019-11-09 08:37:19.782563"]]
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+Redirected to http://localhost:3000/
+Completed 500 Internal Server Error in 160ms (ActiveRecord: 1.7ms)
+
+
+  
+NoMethodError (undefined method `image' for #<User:0x00007fde2f0d17a8>):
+  
+app/controllers/user/registrations_controller.rb:34:in `create'
+Started POST "/users" for ::1 at 2019-11-09 18:39:48 +1000
+Processing by User::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oJk45SKXOGjX+6RjMOEw6HISWNHQXU01aBrQh7jQnNYvmkfo3/IHWUKWbpL9dt0bZdO8VTtTfqi6uLW2HcXejA==", "user"=>{"email"=>"paveldemeter@hotmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "photo_id"=>#<ActionDispatch::Http::UploadedFile:0x00007fde297aeea0 @tempfile=#<Tempfile:/var/folders/ds/rk_y765d7hv2ls3_hl7l6cjm0000gn/T/RackMultipart20191109-19006-1y96ut0.jpeg>, @original_filename="download.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[photo_id]\"; filename=\"download.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Sign up"}
+Unpermitted parameter: :photo_id
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "paveldemeter@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.7ms)
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (12.0ms)
+Completed 500 Internal Server Error in 230ms (Views: 52.0ms | ActiveRecord: 4.7ms)
+
+
+  
+NoMethodError (undefined method `attach' for nil:NilClass):
+  
+app/controllers/user/registrations_controller.rb:34:in `create'
+Started POST "/users" for ::1 at 2019-11-09 18:39:58 +1000
+Processing by User::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tWGgxZNmXmomISoFG7BJM0hMKXuvwzYQxVMyU74HLyB1VATjDGVyBDI8CgkSPRIUQHFQxi0wLZIpClu7Wi9nyw==", "user"=>{"email"=>"paveldemeter@hotmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "photo_id"=>#<ActionDispatch::Http::UploadedFile:0x00007fde2e2b1a60 @tempfile=#<Tempfile:/var/folders/ds/rk_y765d7hv2ls3_hl7l6cjm0000gn/T/RackMultipart20191109-19006-ne8hob.jpeg>, @original_filename="download.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[photo_id]\"; filename=\"download.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Sign up"}
+Unpermitted parameter: :photo_id
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "paveldemeter@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.2ms)
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.6ms)
+Completed 500 Internal Server Error in 188ms (Views: 36.9ms | ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `attach' for nil:NilClass):
+  
+app/controllers/user/registrations_controller.rb:34:in `create'
+Started POST "/users" for ::1 at 2019-11-09 18:43:55 +1000
+  
+ActionController::RoutingError (undefined local variable or method `current_user' for User::RegistrationsController:Class):
+  
+app/controllers/user/registrations_controller.rb:33:in `<class:RegistrationsController>'
+app/controllers/user/registrations_controller.rb:3:in `<main>'
+Started GET "/" for ::1 at 2019-11-09 18:44:16 +1000
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  Rendered pages/homepage.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 451ms (Views: 441.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-11-09 18:44:17 +1000
+  
+ActionController::RoutingError (undefined local variable or method `current_user' for User::RegistrationsController:Class):
+  
+app/controllers/user/registrations_controller.rb:33:in `<class:RegistrationsController>'
+app/controllers/user/registrations_controller.rb:3:in `<main>'
+Started GET "/" for ::1 at 2019-11-09 18:44:19 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  Rendered pages/homepage.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 64ms (Views: 62.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-11-09 18:44:20 +1000
+  
+ActionController::RoutingError (undefined local variable or method `current_user' for User::RegistrationsController:Class):
+  
+app/controllers/user/registrations_controller.rb:33:in `<class:RegistrationsController>'
+app/controllers/user/registrations_controller.rb:3:in `<main>'
+Started GET "/users/sign_up" for ::1 at 2019-11-09 18:44:33 +1000
+Processing by User::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 61ms (Views: 43.3ms | ActiveRecord: 4.6ms)
+
+
+Started POST "/users" for ::1 at 2019-11-09 18:44:47 +1000
+Processing by User::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fTNTOzM2FsBaf16vl5+6E/x8WSfkBQ6SngBXtEv5P6O9BvcdrDU6rk5ifqOeEuE09EEgmmb2FRByWT5cr9F3SA==", "user"=>{"email"=>"paveldemeter@hotmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "photo_id"=>#<ActionDispatch::Http::UploadedFile:0x00007fcc1b78ed28 @tempfile=#<Tempfile:/var/folders/ds/rk_y765d7hv2ls3_hl7l6cjm0000gn/T/RackMultipart20191109-19177-ucpwg5.jpeg>, @original_filename="download.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[photo_id]\"; filename=\"download.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Sign up"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `attach' for nil:NilClass):
+  
+app/controllers/user/registrations_controller.rb:33:in `create'
+Started POST "/users" for ::1 at 2019-11-09 18:46:01 +1000
+Processing by User::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fTNTOzM2FsBaf16vl5+6E/x8WSfkBQ6SngBXtEv5P6O9BvcdrDU6rk5ifqOeEuE09EEgmmb2FRByWT5cr9F3SA==", "user"=>{"email"=>"paveldemeter@hotmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "photo_id"=>#<ActionDispatch::Http::UploadedFile:0x00007fcc2301ad28 @tempfile=#<Tempfile:/var/folders/ds/rk_y765d7hv2ls3_hl7l6cjm0000gn/T/RackMultipart20191109-19177-agkt3x.jpeg>, @original_filename="download.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[photo_id]\"; filename=\"download.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Sign up"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `attach' for nil:NilClass):
+  
+app/controllers/user/registrations_controller.rb:33:in `create'
+Started POST "/users" for ::1 at 2019-11-09 18:46:41 +1000
+Processing by User::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fTNTOzM2FsBaf16vl5+6E/x8WSfkBQ6SngBXtEv5P6O9BvcdrDU6rk5ifqOeEuE09EEgmmb2FRByWT5cr9F3SA==", "user"=>{"email"=>"paveldemeter@hotmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "photo_id"=>#<ActionDispatch::Http::UploadedFile:0x00007fcc2140d7e8 @tempfile=#<Tempfile:/var/folders/ds/rk_y765d7hv2ls3_hl7l6cjm0000gn/T/RackMultipart20191109-19177-v6uk8d.jpeg>, @original_filename="download.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[photo_id]\"; filename=\"download.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Sign up"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `attach' for nil:NilClass):
+  
+app/controllers/user/registrations_controller.rb:33:in `create'
+Started POST "/users" for ::1 at 2019-11-09 18:47:33 +1000
+Processing by User::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fTNTOzM2FsBaf16vl5+6E/x8WSfkBQ6SngBXtEv5P6O9BvcdrDU6rk5ifqOeEuE09EEgmmb2FRByWT5cr9F3SA==", "user"=>{"email"=>"paveldemeter@hotmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "photo_id"=>#<ActionDispatch::Http::UploadedFile:0x00007fcc211acb48 @tempfile=#<Tempfile:/var/folders/ds/rk_y765d7hv2ls3_hl7l6cjm0000gn/T/RackMultipart20191109-19177-143ifrb.jpeg>, @original_filename="download.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[photo_id]\"; filename=\"download.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Sign up"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `attach' for nil:NilClass):
+  
+app/controllers/user/registrations_controller.rb:33:in `create'
+Started POST "/users" for ::1 at 2019-11-09 18:47:43 +1000
+Processing by User::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fTNTOzM2FsBaf16vl5+6E/x8WSfkBQ6SngBXtEv5P6O9BvcdrDU6rk5ifqOeEuE09EEgmmb2FRByWT5cr9F3SA==", "user"=>{"email"=>"paveldemeter@hotmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "photo_id"=>#<ActionDispatch::Http::UploadedFile:0x00007fcc21346a30 @tempfile=#<Tempfile:/var/folders/ds/rk_y765d7hv2ls3_hl7l6cjm0000gn/T/RackMultipart20191109-19177-siympc.jpeg>, @original_filename="download.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[photo_id]\"; filename=\"download.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Sign up"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `attach' for nil:NilClass):
+  
+app/controllers/user/registrations_controller.rb:33:in `create'
+Started GET "/" for ::1 at 2019-11-09 18:55:14 +1000
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  Rendered pages/homepage.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 443ms (Views: 433.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-11-09 18:55:15 +1000
+Processing by User::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 62ms (Views: 44.6ms | ActiveRecord: 4.7ms)
+
+
+Started POST "/users" for ::1 at 2019-11-09 18:55:26 +1000
+Processing by User::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9CWA20vZlw5Nnk0/BCwLPh9Sh0PjIGs1wgGlLzpgrkN7Jv/WtryoP9jzh87Ju+bNCJNjxwguWKgQo8Aen3XsGQ==", "user"=>{"email"=>"paveldemeter@hotmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f814d8f9230 @tempfile=#<Tempfile:/var/folders/ds/rk_y765d7hv2ls3_hl7l6cjm0000gn/T/RackMultipart20191109-19400-8d75xj.jpeg>, @original_filename="download.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"download.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Sign up"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `attach' for nil:NilClass):
+  
+app/controllers/user/registrations_controller.rb:33:in `create'
+Started POST "/users" for ::1 at 2019-11-09 18:58:53 +1000
+Processing by User::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9CWA20vZlw5Nnk0/BCwLPh9Sh0PjIGs1wgGlLzpgrkN7Jv/WtryoP9jzh87Ju+bNCJNjxwguWKgQo8Aen3XsGQ==", "user"=>{"email"=>"paveldemeter@hotmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f81452e2ae8 @tempfile=#<Tempfile:/var/folders/ds/rk_y765d7hv2ls3_hl7l6cjm0000gn/T/RackMultipart20191109-19400-canclh.jpeg>, @original_filename="download.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"download.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Sign up"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `attach' for nil:NilClass):
+  
+app/controllers/user/registrations_controller.rb:33:in `create'
+Started GET "/" for ::1 at 2019-11-09 18:58:56 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  Rendered pages/homepage.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 43ms (Views: 41.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-11-09 18:58:57 +1000
+Processing by User::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 55ms (Views: 37.2ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/users" for ::1 at 2019-11-09 18:59:06 +1000
+Processing by User::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1hvozSdQ0iwlzYqIKws94f5iy34WUaY3Im1tKChF4BRZGJfA2jXtHbCgQHnmnNAS6aMv+v1flarwzwgZjVCiTg==", "user"=>{"email"=>"pajdos@hotmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f814da61be0 @tempfile=#<Tempfile:/var/folders/ds/rk_y765d7hv2ls3_hl7l6cjm0000gn/T/RackMultipart20191109-19400-ehrxi8.jpeg>, @original_filename="download.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"download.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Sign up"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `attach' for nil:NilClass):
+  
+app/controllers/user/registrations_controller.rb:33:in `create'
+Started POST "/users" for ::1 at 2019-11-09 18:59:26 +1000
+Processing by User::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1hvozSdQ0iwlzYqIKws94f5iy34WUaY3Im1tKChF4BRZGJfA2jXtHbCgQHnmnNAS6aMv+v1flarwzwgZjVCiTg==", "user"=>{"email"=>"pajdos@hotmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f81467cd278 @tempfile=#<Tempfile:/var/folders/ds/rk_y765d7hv2ls3_hl7l6cjm0000gn/T/RackMultipart20191109-19400-1hu3d3c.jpeg>, @original_filename="download.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"download.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Sign up"}
+Unpermitted parameter: :image
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "pajdos@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.1ms)
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.3ms)
+Completed 500 Internal Server Error in 207ms (Views: 39.8ms | ActiveRecord: 5.0ms)
+
+
+  
+NoMethodError (undefined method `attach' for nil:NilClass):
+  
+app/controllers/user/registrations_controller.rb:34:in `create'
+Started POST "/users" for ::1 at 2019-11-09 18:59:31 +1000
+Processing by User::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FMa7593iJN7s4iUavuBS/3y+cHnbb45pb/QO4cFW7kjU8x/BQuEIsPj/BRa3bQnYdIMJxFmcleuDrWcJJX6mow==", "user"=>{"email"=>"pajdos@hotmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f81498289b8 @tempfile=#<Tempfile:/var/folders/ds/rk_y765d7hv2ls3_hl7l6cjm0000gn/T/RackMultipart20191109-19400-1w6e0j5.jpeg>, @original_filename="download.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"download.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Sign up"}
+Unpermitted parameter: :image
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "pajdos@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.0ms)
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.8ms)
+Completed 500 Internal Server Error in 191ms (Views: 38.8ms | ActiveRecord: 1.1ms)
+
+
+  
+NoMethodError (undefined method `attach' for nil:NilClass):
+  
+app/controllers/user/registrations_controller.rb:34:in `create'
+Started POST "/users" for ::1 at 2019-11-09 19:00:55 +1000
+Processing by User::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FMa7593iJN7s4iUavuBS/3y+cHnbb45pb/QO4cFW7kjU8x/BQuEIsPj/BRa3bQnYdIMJxFmcleuDrWcJJX6mow==", "user"=>{"email"=>"pajdos@hotmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f814da4a7b0 @tempfile=#<Tempfile:/var/folders/ds/rk_y765d7hv2ls3_hl7l6cjm0000gn/T/RackMultipart20191109-19400-klpane.jpeg>, @original_filename="download.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"download.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Sign up"}
+Unpermitted parameter: :image
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "pajdos@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.0ms)
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 227ms (Views: 62.5ms | ActiveRecord: 5.0ms)
+
+
+  
+NoMethodError (undefined method `attach' for nil:NilClass):
+  
+app/controllers/user/registrations_controller.rb:34:in `create'
+Started GET "/" for ::1 at 2019-11-09 19:00:57 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  Rendered pages/homepage.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 33ms (Views: 31.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-11-09 19:00:58 +1000
+Processing by User::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.8ms)
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 39ms (Views: 38.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-11-09 19:01:09 +1000
+Processing by User::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hYdHejp44BD/NE58sce0w3zugW5Sl9lErkHVPuko90AKhDh3xx3fIWpZhI18UFkway9l6rmZ6tl847APTD21Gg==", "user"=>{"email"=>"paveldemeter@hotmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f81480635f8 @tempfile=#<Tempfile:/var/folders/ds/rk_y765d7hv2ls3_hl7l6cjm0000gn/T/RackMultipart20191109-19400-1y78105.jpeg>, @original_filename="download.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"download.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Sign up"}
+Unpermitted parameter: :image
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "paveldemeter@hotmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.9ms)
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.1ms)
+Completed 500 Internal Server Error in 207ms (Views: 55.6ms | ActiveRecord: 1.1ms)
+
+
+  
+NoMethodError (undefined method `attach' for nil:NilClass):
+  
+app/controllers/user/registrations_controller.rb:34:in `create'
+Started POST "/users" for ::1 at 2019-11-09 19:01:41 +1000
+Processing by User::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hYdHejp44BD/NE58sce0w3zugW5Sl9lErkHVPuko90AKhDh3xx3fIWpZhI18UFkway9l6rmZ6tl847APTD21Gg==", "user"=>{"email"=>"paveldemeter@hotmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f81454664a0 @tempfile=#<Tempfile:/var/folders/ds/rk_y765d7hv2ls3_hl7l6cjm0000gn/T/RackMultipart20191109-19400-etv0f5.jpeg>, @original_filename="download.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"download.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Sign up"}
+Unpermitted parameter: :image
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "paveldemeter@hotmail.com"], ["LIMIT", 1]]
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.8ms)
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 205ms (Views: 42.5ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/users" for ::1 at 2019-11-09 19:01:57 +1000
+Processing by User::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RJT8tyjWdxPJyGkC+l0Q7WIN6m+kpGDqWNPX3F8xjAuEoViRt9Vbfd3VSQ7z0EvKajCT0iZXe2i0ir40uxnE4A==", "user"=>{"email"=>"demeter@hotmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f8147df0cf8 @tempfile=#<Tempfile:/var/folders/ds/rk_y765d7hv2ls3_hl7l6cjm0000gn/T/RackMultipart20191109-19400-wsizav.jpeg>, @original_filename="download.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"download.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Sign up"}
+Unpermitted parameter: :image
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demeter@hotmail.com"], ["LIMIT", 1]]
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "demeter@hotmail.com"], ["encrypted_password", "$2a$11$IQ.15IWlscmCGFFPndLXnOTQpCP/40pNtoeWi.R01PS20xcUhHJ1C"], ["created_at", "2019-11-09 09:01:58.085792"], ["updated_at", "2019-11-09 09:01:58.085792"]]
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 157ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 19:01:58 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  Rendered pages/homepage.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 44ms (Views: 39.6ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 19:02:35 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  Rendered pages/homepage.html.erb within layouts/application (23.3ms)
+Completed 200 OK in 59ms (Views: 51.6ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-11-09 19:02:36 +1000
+Processing by User::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 19:02:36 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  Rendered pages/homepage.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 38ms (Views: 36.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-11-09 19:02:38 +1000
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 19:02:38 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  Rendered pages/homepage.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 57ms (Views: 54.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-11-09 19:02:39 +1000
+Processing by User::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 19:02:39 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "User"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  Rendered pages/homepage.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 39ms (Views: 35.7ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2019-11-09 19:02:40 +1000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"tf/+3c70FlHuLjx4lQ70meDRY1nsnSchiGKGq8hJWwp1ylr7Ufc6P/ozHHScg6++6Owa5G5uPKNkO+9DLGET4Q=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 19:02:40 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  Rendered pages/homepage.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-11-09 19:02:41 +1000
+Processing by User::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.7ms)
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 41ms (Views: 40.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-11-09 19:02:53 +1000
+Processing by User::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OH++xJ7+dfhYH5LvBI/4ybyCvQoUlsHI7zSJzGuhQyVWPM50ZJheicoiC4ZPcKL0cq8X36+/uEKum5vv7TMu3w==", "user"=>{"email"=>"paja@demeter.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f8145578140 @tempfile=#<Tempfile:/var/folders/ds/rk_y765d7hv2ls3_hl7l6cjm0000gn/T/RackMultipart20191109-19400-1tvn6e.jpeg>, @original_filename="download.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"download.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Sign up"}
+Unpermitted parameter: :image
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "paja@demeter.com"], ["LIMIT", 1]]
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "paja@demeter.com"], ["encrypted_password", "$2a$11$6JHJFoniN6A.IVe5L17iSOQtpLPKS7oUpOQ/AojS.GoTwycYR.O4e"], ["created_at", "2019-11-09 09:02:53.710791"], ["updated_at", "2019-11-09 09:02:53.710791"]]
+  ↳ app/controllers/user/registrations_controller.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user/registrations_controller.rb:33
+Redirected to http://localhost:3000/
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 26], ["record_type", "User"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/user/registrations_controller.rb:34
+Completed 500 Internal Server Error in 160ms (ActiveRecord: 2.2ms)
+
+
+  
+NameError (Cannot load `Rails.config.active_storage.service`:
+uninitialized constant Cloudinary):
+  
+app/controllers/user/registrations_controller.rb:34:in `create'
+Started POST "/users" for ::1 at 2019-11-09 19:03:10 +1000
+Processing by User::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OH++xJ7+dfhYH5LvBI/4ybyCvQoUlsHI7zSJzGuhQyVWPM50ZJheicoiC4ZPcKL0cq8X36+/uEKum5vv7TMu3w==", "user"=>{"email"=>"paja@demeter.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f814da90260 @tempfile=#<Tempfile:/var/folders/ds/rk_y765d7hv2ls3_hl7l6cjm0000gn/T/RackMultipart20191109-19400-6kxs4s.jpeg>, @original_filename="download.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"download.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Sign up"}
+Unpermitted parameter: :image
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "paja@demeter.com"], ["LIMIT", 1]]
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.9ms)
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 229ms (Views: 40.8ms | ActiveRecord: 5.3ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4862635681502691960)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4862635681502691960)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2019-11-09 19:09:22 +1000
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  Rendered pages/homepage.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 436ms (Views: 427.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-11-09 19:09:23 +1000
+Processing by User::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.7ms)
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 74ms (Views: 55.8ms | ActiveRecord: 4.6ms)
+
+
+Started POST "/users" for ::1 at 2019-11-09 19:09:37 +1000
+Processing by User::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J/FAF+yAxMglmXcP/TYVDhNSy5c/SU8AKFrSGAgnEEZJsjCnFubvubek7ma2yU8z3X9hQoRgNopp9cA7jrV9vA==", "user"=>{"email"=>"paja19@hotmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007fca8a26d368 @tempfile=#<Tempfile:/var/folders/ds/rk_y765d7hv2ls3_hl7l6cjm0000gn/T/RackMultipart20191109-19803-1g3ast2.jpeg>, @original_filename="download.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"download.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Sign up"}
+Unpermitted parameter: :image
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "paja19@hotmail.com"], ["LIMIT", 1]]
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.0ms)
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 202ms (Views: 45.5ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/users" for ::1 at 2019-11-09 19:09:49 +1000
+Processing by User::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TGYedZB5asN2/Bf1VcakTkOMowvCvlv21Ew2nP/ZWsmK+6HN41uJHGV9+m9gNRp90opAO7GGetZeGUqssYsXEQ==", "user"=>{"email"=>"paja19@hotmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007fca82d2f7e0 @tempfile=#<Tempfile:/var/folders/ds/rk_y765d7hv2ls3_hl7l6cjm0000gn/T/RackMultipart20191109-19803-1uyay7m.jpeg>, @original_filename="download.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"download.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Sign up"}
+Unpermitted parameter: :image
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "paja19@hotmail.com"], ["LIMIT", 1]]
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "paja19@hotmail.com"], ["encrypted_password", "$2a$11$G/CSaBafHMzKeOVo3R4KhewY2N1Qr1zD4rjqQ3m4Ez.d95idKMOra"], ["created_at", "2019-11-09 09:09:49.581607"], ["updated_at", "2019-11-09 09:09:49.581607"]]
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 170ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 19:09:49 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 27], ["record_type", "User"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  Rendered pages/homepage.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 59ms (Views: 55.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 19:10:59 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 27], ["record_type", "User"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  Rendered pages/homepage.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 42ms (Views: 38.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-11-09 19:11:00 +1000
+Processing by User::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 19:11:00 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 27], ["record_type", "User"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  Rendered pages/homepage.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 37ms (Views: 34.9ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2019-11-09 19:11:03 +1000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"OQTO0FDAqtZZA3CsLPFcuaQkr3krU4etgNJXmPibZub/mXFoI+JJCUqCnTYZAuKKNSJMSVhrpo0KhyuotskrPg=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 19:11:03 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  Rendered pages/homepage.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 33ms (Views: 31.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-11-09 19:11:04 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 44ms (Views: 43.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 19:12:12 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  Rendered pages/homepage.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 57ms (Views: 55.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 20:00:11 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  Rendered pages/homepage.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 42ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/about" for ::1 at 2019-11-09 20:00:14 +1000
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 36ms (Views: 34.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-11-09 20:01:55 +1000
+Processing by User::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 43ms (Views: 42.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 20:02:03 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  Rendered pages/homepage.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 36ms (Views: 34.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-11-09 20:02:04 +1000
+Processing by User::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.8ms)
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 61ms (Views: 60.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-11-09 20:02:05 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 38ms (Views: 37.3ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2019-11-09 20:02:05 +1000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"tNeumgFEl/t7hj1fzqqat3TOwhGEvv+/2esHBU4wsCWSgiobep2jNNN91QWsGC/hT6Wmu+0+q08K3pzxL+MSMg=="}
+Redirected to http://localhost:3000/
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 20:02:05 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  Rendered pages/homepage.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 32ms (Views: 30.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-11-09 20:02:06 +1000
+Processing by User::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 41ms (Views: 40.4ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2019-11-09 20:02:07 +1000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"PDT4eWeey/8VmaZ9ScuYhzufvodoyNCnI9dQR8SAGXMaYXz4HEf/ML1iTicreS3RAPTaLQFIhFfw4suzpVO7ZA=="}
+Redirected to http://localhost:3000/
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 20:02:07 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  Rendered pages/homepage.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 32ms (Views: 30.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-11-09 20:02:08 +1000
+Processing by User::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 43ms (Views: 42.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 20:02:09 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  Rendered pages/homepage.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 55ms (Views: 53.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/pricing" for ::1 at 2019-11-09 20:04:00 +1000
+Processing by PagesController#pricing as HTML
+  Rendering pages/pricing.html.erb within layouts/application
+  Rendered pages/pricing.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 38ms (Views: 37.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/about" for ::1 at 2019-11-09 20:04:01 +1000
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/pricing" for ::1 at 2019-11-09 20:04:02 +1000
+Processing by PagesController#pricing as HTML
+  Rendering pages/pricing.html.erb within layouts/application
+  Rendered pages/pricing.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 36ms (Views: 33.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cars/new?price=6499" for ::1 at 2019-11-09 20:04:03 +1000
+Processing by CarsController#new as HTML
+  Parameters: {"price"=>"6499"}
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 53ms (Views: 33.7ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 20:05:02 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  Rendered pages/homepage.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 35ms (Views: 33.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/pricing" for ::1 at 2019-11-09 20:05:02 +1000
+Processing by PagesController#pricing as HTML
+  Rendering pages/pricing.html.erb within layouts/application
+  Rendered pages/pricing.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 55ms (Views: 53.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cars/new?price=4499" for ::1 at 2019-11-09 20:06:07 +1000
+Processing by CarsController#new as HTML
+  Parameters: {"price"=>"4499"}
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 39ms (Views: 37.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cars/new?price=6499" for ::1 at 2019-11-09 20:06:09 +1000
+Processing by CarsController#new as HTML
+  Parameters: {"price"=>"6499"}
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 39ms (Views: 37.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 20:06:10 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  Rendered pages/homepage.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 37ms (Views: 34.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/pricing" for ::1 at 2019-11-09 20:06:10 +1000
+Processing by PagesController#pricing as HTML
+  Rendering pages/pricing.html.erb within layouts/application
+  Rendered pages/pricing.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 32ms (Views: 31.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/about" for ::1 at 2019-11-09 20:06:11 +1000
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 33ms (Views: 31.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/contact" for ::1 at 2019-11-09 20:06:12 +1000
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 55ms (Views: 53.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cars" for ::1 at 2019-11-09 20:06:13 +1000
+Processing by CarsController#index as HTML
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.8ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:10
+  Rendered cars/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 37ms (Views: 33.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2019-11-09 20:06:14 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  Rendered pages/homepage.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 36ms (Views: 34.0ms | ActiveRecord: 0.0ms)
+
+

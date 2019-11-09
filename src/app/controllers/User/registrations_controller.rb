@@ -28,15 +28,6 @@ class User::RegistrationsController < Devise::RegistrationsController
   # def destroy
   #   super
   # end
-
-  def create
-    super
-    current_user.photo_pic.attach(params[:user][:photo_pic])
-    current_user.save
-  end
-
-
-
   # GET /resource/cancel
   # Forces the session data which is usually expired after sign
   # in to be expired now. This is useful if the user wants to

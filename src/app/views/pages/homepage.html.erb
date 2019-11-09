@@ -8,8 +8,8 @@
 </head>
 <body>
 <% if user_signed_in? %>
-  <% if current_user.photo_pic.attached? %>
-    <%= image_tag current_user.photo_pic, width: 120 %>
+  <% if current_user.image.attached? %>
+    <%= image_tag current_user.image, width: 120 %>
   <% end %>
   <p>Hello,<%= current_user.first_name %></p>
 <% end %>

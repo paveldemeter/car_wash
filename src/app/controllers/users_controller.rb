@@ -3,13 +3,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
     def create
       super
-      current_user.photo_pic.attach(params[:user][:photo_pic])
+      current_user.image.attach(params[:user][:image])
       current_user.save
     end
   
     protected
   
     def configure_permitted_parameters
-      devise_parameter_sanitizer.for(:sign_up).push(:photo_pic)  
+      devise_parameter_sanitizer.for(:sign_up).push(:image)  
     end
   end
