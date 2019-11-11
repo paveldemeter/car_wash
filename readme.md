@@ -136,32 +136,24 @@ Washer will have their own tab "Washers" information about the vehicle they are 
 ![wireframe](docs/wireframes/wf_contact.png)
 
 
+TO DO;
 
+R15 Explain the different high-level components (abstractions) in your app
 
-R14
+R14 ERD 
 
-An ERD for your  _app_
+R17 Describe your projects models in terms of the relationships (active record associations) they have with each other
 
-R15
+R18 Discuss the database relations to be implemented in your application
 
-Explain the different high-level components (abstractions) in your  _app_
+##### Describe the way tasks are allocated and tracked in your project
 
-R16
+For time management, I used note taking to make sure what I have to still implement & what is more important, Much like trello but I don't like trellos design, I would rather type notes or write them. 
 
-Detail any third party services that your  _app_  will use
+Here is an example of note taking:
 
-R17
+![notes](docs/notes.png)
+![notes](docs/asap_notes.png)
 
-Describe your projects  _models_  in terms of the relationships (active record associations) they have with each other
+## 
 
-R18
-
-Discuss the database relations to be implemented in your application
-
-R19
-
-Provide your database schema design
-
-R20
-
-Describe the way tasks are allocated and tracked in your project
