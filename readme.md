@@ -1,7 +1,7 @@
 ﻿
 # Splash Auto Mobile app 
 
-### Defining Purpose and Problem
+### Defining Problem
 
 >  Identify the problem you’re trying to solve by building this particular marketplace App?
 
@@ -148,6 +148,8 @@ Washer will get paid from stripe which is a secure payment system.
 ![wireframe](docs/wireframes/wf_jobs.png)
 ##### Contact us
 ![wireframe](docs/wireframes/wf_contact.png)
+
+## 
 
 
 ##### Describe the way tasks are allocated and tracked in your project

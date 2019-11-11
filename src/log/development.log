@@ -30031,3 +30031,10 @@ Processing by PagesController#homepage as HTML
 Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2019-11-11 14:48:53 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  Rendered pages/homepage.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 62ms (Views: 60.9ms | ActiveRecord: 0.0ms)
+
+
