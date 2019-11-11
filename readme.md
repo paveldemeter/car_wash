@@ -43,6 +43,7 @@ ROLIFY has been implemented so an Owner cannot go under the washer tab t
 DEVISE has been implemented so an lorem
 
 ##### SiteMap
+![alt text](docs/sitempap.png)
 
 ##### Screenshots
 
