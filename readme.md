@@ -117,14 +117,25 @@ Washers & vehicle owners will both require ID to sign up to the site, Rolify wil
 
 Washer will have their own tab "Washers" information about the vehicle they are cleaning, registration details, suburb, make, model & year of vehicle.
 
-R12
-
-User stories for your  _app_
 
 #### Wire-frames
 
 ##### Homepage
-![pricing](docs/wireframes/wf_homepage.png)
+![wireframe](docs/wireframes/wf_homepage.png)
+
+![wireframe](docs/wireframes/wf_about.png)
+
+![wireframe](docs/wireframes/wf_pricing.png)
+
+![wireframe](docs/wireframes/wf_carowner.png)
+
+![wireframe](docs/wireframes/wf_signup.png)
+
+![wireframe](docs/wireframes/wf_jobs.png)
+
+![wireframe](docs/wireframes/wf_contact.png)
+
+
 
 
 R14
