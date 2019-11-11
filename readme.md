@@ -42,6 +42,10 @@ ROLIFY has been implemented so an Owner cannot go under the washer tab t
 
 DEVISE has been implemented so an lorem
 
+The site has an layout so on everypage you can access the Home page, the footer & the header which consists of the users log out, login & sign up.
+
+
+
 ### SiteMap
 ![sitemap](docs/sitemap.png)
 
@@ -136,6 +140,17 @@ Washer will have their own tab "Washers" information about the vehicle they are 
 ![wireframe](docs/wireframes/wf_contact.png)
 
 
+##### Describe the way tasks are allocated and tracked in your project
+
+For time management, I used note taking to make sure what I have to still implement & what is more important, Much like trello but I don't like trellos design, I would rather type notes or write them. 
+
+Here is an example of note taking:
+
+![notes](docs/notes.png)
+![notes](docs/asap_notes.png)
+
+##
+
 TO DO;
 
 R15 Explain the different high-level components (abstractions) in your app
@@ -146,14 +161,4 @@ R17 Describe your projects models in terms of the relationships (active record a
 
 R18 Discuss the database relations to be implemented in your application
 
-##### Describe the way tasks are allocated and tracked in your project
-
-For time management, I used note taking to make sure what I have to still implement & what is more important, Much like trello but I don't like trellos design, I would rather type notes or write them. 
-
-Here is an example of note taking:
-
-![notes](docs/notes.png)
-![notes](docs/asap_notes.png)
-
-## 
 
