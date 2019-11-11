@@ -111,16 +111,26 @@ Owners will have the option to choose from 3 sizes to wash their car. As we offe
 
 The website will have an about page implemented for both owners/washers.
 
+##### As an owner I want to be able to pay for my cleaning service through a secure system.
+Stripe will be integrated to implement secure payments between owner & washer.
+
+
 #### Washer User Story
 
 ##### As a a washer I want to be able to login/signup to access the site
 
 Washers & vehicle owners will both require ID to sign up to the site, Rolify will take care of the option to view cars to wash after logging in as a washer.
 
-##### As a washer I want to be able to view internships to see what I could apply for
+##### As a washer I want to be able to view the cars information and owners.
 
 Washer will have their own tab "Washers" information about the vehicle they are cleaning, registration details, suburb, make, model & year of vehicle.
 
+##### As a washer I want to be able to get paid through a secure system such as stripe for security.
+Washer will get paid from stripe which is a secure payment system.
+
+
+
+##### 
 
 #### Wire-frames
 
@@ -156,18 +166,5 @@ Here is an example of note taking:
 - Setup of a system such as mailgun for activation features.
 - Adminstrator dashboard (owner of website)
 - Some sort of 24/7 chat robot for the website incase of any issues occur and to minimalize phone calls and implement automation.
-
-
-##
-
-TO DO;
-
-R15 Explain the different high-level components (abstractions) in your app
-
-R14 ERD 
-
-R17 Describe your projects models in terms of the relationships (active record associations) they have with each other
-
-R18 Discuss the database relations to be implemented in your application
 
 
