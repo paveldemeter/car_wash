@@ -23,7 +23,7 @@ From online social research I see a lot of people asking about professional deta
 
 > Link to GITHUB Repo & Heroku
 
--   Github
+- Github https://github.com/paveldemeter/car_wash
 - Heroku
 
 ## 
