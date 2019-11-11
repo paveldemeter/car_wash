@@ -33,7 +33,7 @@ From online social research I see a lot of people asking about professional deta
 
 The primary purposes of this Web app is to ensure owners can receive a cleaning service for their Vehicle from Washers & Washers can earn a payment upon cleaning the vehicle from the owner.
 
-##### Functionality / features
+##### Functionality / features / Gem Dependencies
 STRIPE has been implemented as a payment system to gain security through a trusted payment system. (Still needs in beta_
 
 CLOUDINARY has been implemented for a user to upload their Identification as an image upload(Both Owners & Washers).
@@ -148,6 +148,15 @@ Here is an example of note taking:
 
 ![notes](docs/notes.png)
 ![notes](docs/asap_notes.png)
+
+
+##### Future Updates
+
+- I would like to implement a google map geo-maping feature so it will allocate the vehicle to the closest washer.
+- Setup of a system such as mailgun for activation features.
+- Adminstrator dashboard (owner of website)
+- Some sort of 24/7 chat robot for the website incase of any issues occur and to minimalize phone calls and implement automation.
+
 
 ##
 
