@@ -42,14 +42,32 @@ ROLIFY has been implemented so an Owner cannot go under the washer tab t
 
 DEVISE has been implemented so an lorem
 
-##### SiteMap
+### SiteMap
 ![sitemap](docs/sitemap.png)
 
-##### Screenshots
+## 
+
+### Screenshots
+##### Homepage
+![pricing](docs/homepage.png)
+##### Signup 
+![signup](docs/signup.png)
+##### About us 
+![aboutus](docs/aboutus.png)
+##### Pricing
+![carowner](docs/pricing.png)
+##### Submitting quote
+![contactus](docs/carowner.png)
+##### Contact 
+![homepage](docs/contactus.png)
+## 
+
 
 ##### Target audience
 
-Target audience for owners is specifically over the age of 17 if you have your Identification & own a vehicle, But for washers you can be over the legal age of 18.
+As the legal age to drive is 17, Splash Auto Mobile Wash has focused on the target audience of people over 18 years of age, for Identification purposes for both owners of vehices and Washers. 
+
+The specific target audience would be car enthuasists, It can also be implemented to small car dealerships as a package, So not only indiviuals but also big organisations which bring a huge market our way.
 
 ##### Tech Stack
 
