@@ -122,17 +122,17 @@ Washer will have their own tab "Washers" information about the vehicle they are 
 
 ##### Homepage
 ![wireframe](docs/wireframes/wf_homepage.png)
-
+##### About
 ![wireframe](docs/wireframes/wf_about.png)
-
+##### Pricing
 ![wireframe](docs/wireframes/wf_pricing.png)
-
+##### Car details
 ![wireframe](docs/wireframes/wf_carowner.png)
-
+##### Sign up
 ![wireframe](docs/wireframes/wf_signup.png)
-
+##### Jobs for Washer
 ![wireframe](docs/wireframes/wf_jobs.png)
-
+##### Contact us
 ![wireframe](docs/wireframes/wf_contact.png)
 
 
