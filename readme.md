@@ -60,6 +60,8 @@ DEVISE has been implemented so an lorem
 ![contactus](docs/carowner.png)
 ##### Contact 
 ![homepage](docs/contactus.png)
+##### iPhone x Homepage
+![iphonex](docs/iphonexhomepage.png)
 ## 
 
 
@@ -119,9 +121,11 @@ R12
 
 User stories for your  _app_
 
-R13
+#### Wire-frames
 
-Wireframes for your  _app_
+##### Homepage
+![pricing](docs/wireframes/wf_homepage.png)
+
 
 R14
 
