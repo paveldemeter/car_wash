@@ -33423,3 +33423,248 @@ Processing by CarsController#index as HTML
 Completed 200 OK in 79ms (Views: 46.3ms | ActiveRecord: 8.8ms)
 
 
+Started GET "/" for ::1 at 2019-11-12 14:21:35 +1000
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 35], ["record_type", "User"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  Rendered pages/homepage.html.erb within layouts/application (63.3ms)
+Completed 200 OK in 441ms (Views: 423.1ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-11-12 14:21:37 +1000
+Processing by User::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 12ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 14:21:37 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 35], ["record_type", "User"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  Rendered pages/homepage.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 64ms (Views: 36.1ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2019-11-12 14:21:39 +1000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"fXF/guDwCwHVgL37GkOG+pbT2eijsY2sG4IB8g183h098hKS+/iZZygowuE/zK+JZhNqNhXDfzBc8o5+LTTO0w=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 14:21:39 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  Rendered pages/homepage.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 44ms (Views: 42.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-11-12 14:21:41 +1000
+Processing by User::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (39.2ms)
+Completed 200 OK in 76ms (Views: 74.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-11-12 14:21:52 +1000
+Processing by User::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CZCKt07sMCB7PiGJguvfZrIcgEOOHC4PDwS8lIErPBDonYVL/6ehZrkTVFDjVZUyfTuOY0ylv23GQIBKPeQNCA==", "user"=>{"roles"=>"0", "email"=>"a@b.e", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameter: :roles
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user/registrations_controller.rb:14
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "a@b.e"], ["LIMIT", 1]]
+  ↳ app/controllers/user/registrations_controller.rb:14
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "a@b.e"], ["encrypted_password", "$2a$11$IsqQWQ0XD/3d0SuxUU7//uiyfFhdu1WYjvRSSOxHG66eHCN9ZwsoS"], ["created_at", "2019-11-12 04:21:53.021735"], ["updated_at", "2019-11-12 04:21:53.021735"]]
+  ↳ app/controllers/user/registrations_controller.rb:14
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user/registrations_controller.rb:14
+Redirected to http://localhost:3000/
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user/registrations_controller.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user/registrations_controller.rb:17
+Completed 302 Found in 172ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 14:21:53 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 36], ["record_type", "User"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  Rendered pages/homepage.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 51ms (Views: 49.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 14:27:39 +1000
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 36], ["record_type", "User"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  Rendered pages/homepage.html.erb within layouts/application (59.4ms)
+Completed 200 OK in 430ms (Views: 410.8ms | ActiveRecord: 8.5ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2019-11-12 14:27:42 +1000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QoCiyO+fqS01tiCjdAF5F3P2hZqw8Suq5IDTNcV4sIoHOkg2mK7AZgbKt9pGBMG7oGijruSCDxmFzuljixSjmQ=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 40ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 14:27:42 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  Rendered pages/homepage.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 36ms (Views: 35.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-11-12 14:27:54 +1000
+Processing by User::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (31.1ms)
+Completed 200 OK in 65ms (Views: 63.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-11-12 14:28:56 +1000
+Processing by User::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5HqpPhXlaIbGKwl/PygPUBVkMt12aGt9aVF+TQVgOc72mEronzcRGI9s2Q3PcaYCglB9TDqaoZrQXT09fYDs8w==", "user"=>{"roles"=>"0", "email"=>"d@a.n", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007fb78e278ce0 @tempfile=#<Tempfile:/var/folders/ds/rk_y765d7hv2ls3_hl7l6cjm0000gn/T/RackMultipart20191112-17094-aax349.png>, @original_filename="blank-profile-picture-973460_640.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"blank-profile-picture-973460_640.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Sign up"}
+Unpermitted parameters: :roles, :image
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user/registrations_controller.rb:14
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "d@a.n"], ["LIMIT", 1]]
+  ↳ app/controllers/user/registrations_controller.rb:14
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "d@a.n"], ["encrypted_password", "$2a$11$.GV8zqu3cE4v0QfjLIQlBuknKzsg0zSDyhnZs2cWhCiTeXjIYirJS"], ["created_at", "2019-11-12 04:28:56.908294"], ["updated_at", "2019-11-12 04:28:56.908294"]]
+  ↳ app/controllers/user/registrations_controller.rb:14
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user/registrations_controller.rb:14
+Redirected to http://localhost:3000/
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 37], ["record_type", "User"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/user/registrations_controller.rb:15
+Completed 500 Internal Server Error in 181ms (ActiveRecord: 2.3ms)
+
+
+  
+RuntimeError (Cannot load `Rails.config.active_storage.service`:
+Missing configuration for the :cloudinary Active Storage service. Configurations available for [:test, :local]):
+  
+app/controllers/user/registrations_controller.rb:15:in `create'
+Started GET "/users/sign_up" for ::1 at 2019-11-12 14:30:18 +1000
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by User::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (83.7ms)
+Completed 200 OK in 497ms (Views: 459.9ms | ActiveRecord: 4.5ms)
+
+
+Started POST "/users" for ::1 at 2019-11-12 14:30:46 +1000
+Processing by User::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tO9RSWVBGFsEJppJERxXqeoyCpDYM3o8uUG5SofxgQiLYE3twZ/PlYiv8IOEUFl2+bEC1GPpCOVxzV1/E51nlw==", "user"=>{"roles"=>"0", "email"=>"d@f.g", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007fb8dcb77770 @tempfile=#<Tempfile:/var/folders/ds/rk_y765d7hv2ls3_hl7l6cjm0000gn/T/RackMultipart20191112-17208-n0t830.png>, @original_filename="blank-profile-picture-973460_640.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[image]\"; filename=\"blank-profile-picture-973460_640.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Sign up"}
+Unpermitted parameters: :roles, :image
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user/registrations_controller.rb:14
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "d@f.g"], ["LIMIT", 1]]
+  ↳ app/controllers/user/registrations_controller.rb:14
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "d@f.g"], ["encrypted_password", "$2a$11$M0Nmymi2Ru7pKW79EUV9Q.3Ux.ZycEXHlQDRJPkDOEtDFgT6ig4Hi"], ["created_at", "2019-11-12 04:30:46.354585"], ["updated_at", "2019-11-12 04:30:46.354585"]]
+  ↳ app/controllers/user/registrations_controller.rb:14
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user/registrations_controller.rb:14
+Redirected to http://localhost:3000/
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 38], ["record_type", "User"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/user/registrations_controller.rb:15
+[36m  Disk Storage (1.5ms) [0m[32mUploaded file to key: D4MajPDLZbRCoLUgxZ4UeYZk (checksum: ms/ni44c+/TBsdHzF0W5aw==)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user/registrations_controller.rb:15
+  [1m[36mActiveStorage::Blob Create (25.0ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "D4MajPDLZbRCoLUgxZ4UeYZk"], ["filename", "blank-profile-picture-973460_640.png"], ["content_type", "image/png"], ["metadata", "{\"identified\":true}"], ["byte_size", 17253], ["checksum", "ms/ni44c+/TBsdHzF0W5aw=="], ["created_at", "2019-11-12 04:30:46.441430"]]
+  ↳ app/controllers/user/registrations_controller.rb:15
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user/registrations_controller.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user/registrations_controller.rb:15
+  [1m[36mActiveStorage::Attachment Create (20.2ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "image"], ["record_type", "User"], ["record_id", 38], ["blob_id", 5], ["created_at", "2019-11-12 04:30:46.482790"]]
+  ↳ app/controllers/user/registrations_controller.rb:15
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1 WHERE "users"."id" = $2[0m  [["updated_at", "2019-11-12 04:30:46.504139"], ["id", 38]]
+  ↳ app/controllers/user/registrations_controller.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user/registrations_controller.rb:15
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: b8ff998d-825d-479d-b0be-712f2f2a7b19) to Async(default) with arguments: #<GlobalID:0x00007fb8dae115f0 @uri=#<URI::GID gid://car-wash/ActiveStorage::Blob/5>>
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/user/registrations_controller.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/user/registrations_controller.rb:17
+Completed 302 Found in 357ms (ActiveRecord: 58.6ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 14:30:46 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:10
+  [1m[36mActiveStorage::Blob Load (2.0ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 38], ["record_type", "User"], ["name", "image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b8ff998d-825d-479d-b0be-712f2f2a7b19] Performing ActiveStorage::AnalyzeJob (Job ID: b8ff998d-825d-479d-b0be-712f2f2a7b19) from Async(default) with arguments: #<GlobalID:0x00007fb8e1923410 @uri=#<URI::GID gid://car-wash/ActiveStorage::Blob/5>>
+  ↳ app/views/pages/homepage.html.erb:11
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b8ff998d-825d-479d-b0be-712f2f2a7b19] [36m  Disk Storage (0.4ms) [0m[34mDownloaded file from key: D4MajPDLZbRCoLUgxZ4UeYZk[0m
+  [1m[36mActiveStorage::Blob Load (4.7ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  Rendered pages/homepage.html.erb within layouts/application (17.9ms)
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b8ff998d-825d-479d-b0be-712f2f2a7b19] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b8ff998d-825d-479d-b0be-712f2f2a7b19]   [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b8ff998d-825d-479d-b0be-712f2f2a7b19]   ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b8ff998d-825d-479d-b0be-712f2f2a7b19]   [1m[36mActiveStorage::Blob Update (1.1ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 5]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b8ff998d-825d-479d-b0be-712f2f2a7b19]   ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b8ff998d-825d-479d-b0be-712f2f2a7b19]   [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b8ff998d-825d-479d-b0be-712f2f2a7b19]   ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b8ff998d-825d-479d-b0be-712f2f2a7b19] Performed ActiveStorage::AnalyzeJob (Job ID: b8ff998d-825d-479d-b0be-712f2f2a7b19) from Async(default) in 22.89ms
+Completed 200 OK in 61ms (Views: 53.0ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5371c61e6bdcfeb648d0c31e5b9addf18b297974/blank-profile-picture-973460_640.png" for ::1 at 2019-11-12 14:30:46 +1000
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5371c61e6bdcfeb648d0c31e5b9addf18b297974", "filename"=>"blank-profile-picture-973460_640"}
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/paveldemeter/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.9ms) [0m[34mGenerated URL for file at key: D4MajPDLZbRCoLUgxZ4UeYZk (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRSRFJOWVdwUVJFeGFZbEpEYjB4VlozaGFORlZsV1ZwckJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSnphVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZbXhoYm1zdGNISnZabWxzWlMxd2FXTjBkWEpsTFRrM016UTJNRjgyTkRBdWNHNW5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWRpYkdGdWF5MXdjbTltYVd4bExYQnBZM1IxY21VdE9UY3pORFl3WHpZME1DNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTExLTEyVDA0OjM1OjQ2LjcwNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--066e30cdee1f0ec8a1cf9afb65cc4c4606f5faeb/blank-profile-picture-973460_640.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22blank-profile-picture-973460_640.png%22%3B+filename%2A%3DUTF-8%27%27blank-profile-picture-973460_640.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRSRFJOWVdwUVJFeGFZbEpEYjB4VlozaGFORlZsV1ZwckJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSnphVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZbXhoYm1zdGNISnZabWxzWlMxd2FXTjBkWEpsTFRrM016UTJNRjgyTkRBdWNHNW5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWRpYkdGdWF5MXdjbTltYVd4bExYQnBZM1IxY21VdE9UY3pORFl3WHpZME1DNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTExLTEyVDA0OjM1OjQ2LjcwNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--066e30cdee1f0ec8a1cf9afb65cc4c4606f5faeb/blank-profile-picture-973460_640.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22blank-profile-picture-973460_640.png%22%3B+filename%2A%3DUTF-8%27%27blank-profile-picture-973460_640.png
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRSRFJOWVdwUVJFeGFZbEpEYjB4VlozaGFORlZsV1ZwckJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSnphVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZbXhoYm1zdGNISnZabWxzWlMxd2FXTjBkWEpsTFRrM016UTJNRjgyTkRBdWNHNW5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWRpYkdGdWF5MXdjbTltYVd4bExYQnBZM1IxY21VdE9UY3pORFl3WHpZME1DNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTExLTEyVDA0OjM1OjQ2LjcwNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--066e30cdee1f0ec8a1cf9afb65cc4c4606f5faeb/blank-profile-picture-973460_640.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22blank-profile-picture-973460_640.png%22%3B+filename%2A%3DUTF-8%27%27blank-profile-picture-973460_640.png" for ::1 at 2019-11-12 14:30:46 +1000
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"blank-profile-picture-973460_640.png\"; filename*=UTF-8''blank-profile-picture-973460_640.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRSRFJOWVdwUVJFeGFZbEpEYjB4VlozaGFORlZsV1ZwckJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSnphVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZbXhoYm1zdGNISnZabWxzWlMxd2FXTjBkWEpsTFRrM016UTJNRjgyTkRBdWNHNW5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWRpYkdGdWF5MXdjbTltYVd4bExYQnBZM1IxY21VdE9UY3pORFl3WHpZME1DNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTExLTEyVDA0OjM1OjQ2LjcwNFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--066e30cdee1f0ec8a1cf9afb65cc4c4606f5faeb", "filename"=>"blank-profile-picture-973460_640"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms)
+
+

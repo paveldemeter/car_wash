@@ -43,9 +43,12 @@
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="buttons">
-              <%= link_to 'Sign Up', new_user_registration_path, class: "button is-success" %>
-              <%= link_to 'Sign In', new_user_session_path, class: 'button is-info' %>
-              <%= link_to 'Sign Out', destroy_user_session_path, method: 'delete', class: 'button is-warning' %>
+              <% if user_signed_in? %>
+                <%= link_to 'Sign Out', destroy_user_session_path, method: 'delete', class: 'button is-warning' %>
+              <% else %>
+                <%= link_to 'Sign Up', new_user_registration_path, class: "button is-success" %>
+                <%= link_to 'Sign In', new_user_session_path, class: 'button is-info' %>
+              <% end %>
             </div>
           </div>
         </div>

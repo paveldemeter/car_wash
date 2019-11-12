@@ -18,5 +18,7 @@ user.cars.create([
     {model: 'abc', make: 'cba', rego: 'cab'}
 ])
 
+Role.create(name: 'washer')
+
 car.build_payment(cleaner: user1, price: 10.00)
 car.save
