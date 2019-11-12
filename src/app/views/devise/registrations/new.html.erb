@@ -46,6 +46,12 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
+    <%= f.label :washer %>
+    <%= f.check_box :roles %>
+  </div>
+
+
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
@@ -74,4 +80,4 @@
 <% end %>
 </div>
 
-<%= render "devise/shared/links" %>
+

@@ -1,17 +1,25 @@
-<table>
+<table style="margin: 0;
+    width: 100%;
+    border: 1px solid black;">
     <thead>
-        <tr>
-            <td>Model</td>
-            <td>Make</td>
-            <td>Rego</td>
+        <tr style="border: 2px solid blue;">
+            <td><strong>Model</strong></td>
+            <td><strong>Make</strong></td>
+            <td><strong>Rego</strong></td>
+            <td><strong>Suburb</strong></td>
+            <td><strong>Year</strong></td>
+            <td><strong>Price</strong></td>
         </tr>
     </thead>
-    <tbody>
+    <tbody style="font-color; blue;">
         <% @cars.each do |car| %>
             <tr>
                 <td><%= car.model %></td>
                 <td><%= car.make %></td>
                 <td><%= car.rego %></td>
+                <td><%= car.suburb %></td>
+                <td><%= car.year %></td>
+                <td><%= car.price %></td>
             </tr>
         <% end %>
     </tbody>

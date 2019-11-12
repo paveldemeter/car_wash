@@ -10,9 +10,12 @@ class User::RegistrationsController < Devise::RegistrationsController
   # end
 
   # POST /resource
-  # def create
-  #   super
-  # end
+  def create
+    super
+    current_user.image.attach(params[:user][:image]) if params[:user][:image]
+    current_user.roles << Role.find_by(name: 'washer') if params[:user][:roles] == '1'
+    current_user.save
+  end
 
   # GET /resource/edit
   # def edit

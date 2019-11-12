@@ -3,7 +3,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
     def create
       super
-      current_user.image.attach(params[:user][:image])
+      current_user.image.attach(params[:user][:image]) if params[:user][:image]
+      current_user.roles << Role.find_by(name: 'washer') if params[:user][:roles] == '1'
       current_user.save
     end
   

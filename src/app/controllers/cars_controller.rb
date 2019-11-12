@@ -1,5 +1,6 @@
 class CarsController < ApplicationController
-  # before_action :redirect_if_not_washer, only: [:show, :index]
+  before_action :redirect_if_not_logged_in, only: [:new]
+  before_action :redirect_if_not_washer, only: [:show, :index]
 
   def index
     @cars = Car.all

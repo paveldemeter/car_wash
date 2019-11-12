@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
+  root 'pages#homepage'
   get 'cars/index'
   get 'cars/show'
   get 'cars/edit'
   get 'cars/new'
-  root 'pages#homepage'
   get 'pages/contact'
   get 'pages/pricing'
   get 'pages/about'
