@@ -33334,3 +33334,48 @@ Processing by PagesController#homepage as HTML
 Completed 200 OK in 60ms (Views: 57.9ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/pages/pricing" for ::1 at 2019-11-12 12:53:42 +1000
+Processing by PagesController#pricing as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering pages/pricing.html.erb within layouts/application
+  Rendered pages/pricing.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 39ms (Views: 35.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/cars/new?price=6499" for ::1 at 2019-11-12 12:53:44 +1000
+Processing by CarsController#new as HTML
+  Parameters: {"price"=>"6499"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendering cars/new.html.erb within layouts/application
+  Rendered cars/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 40ms (Views: 36.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/cars" for ::1 at 2019-11-12 12:53:46 +1000
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mRole Load (1.2ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" WHERE "roles"."name" = $1 LIMIT $2[0m  [["name", "washer"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  [1m[36mRole Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = $1 AND "roles"."id" = $2 LIMIT $3[0m  [["user_id", 35], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:3
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:15
+  Rendered cars/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 56ms (Views: 46.0ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/" for ::1 at 2019-11-12 12:53:48 +1000
+Processing by PagesController#homepage as HTML
+  Rendering pages/homepage.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 35], ["record_type", "User"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/pages/homepage.html.erb:11
+  Rendered pages/homepage.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 39ms (Views: 36.6ms | ActiveRecord: 1.1ms)
+
+
