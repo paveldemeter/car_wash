@@ -3,9 +3,10 @@
 <div class="control columns is-centered">
   <%= form_with model: @car, url: cars_path, method: 'post', local: true do |f| %>
 
+    <%= f.hidden_field :price, value: params[:price].to_i/100.0  %>
     <div class="field">
         <%= f.label :price %><br />
-        $<%= f.number_field :price, value: params[:price].to_i/100.0, disabled: true  %>
+        $<%= params[:price].to_i/100.0 %>
     </div>
     
 
