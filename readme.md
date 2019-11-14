@@ -41,7 +41,7 @@ ROLIFY has been implemented so an Owner cannot go under the washer tab t
 
 DEVISE has been implemented for user control.
 
-The site has an layout so on everypage you can access the Home page, the footer & the header which consists of the users log out, login & sign up.
+The site has a simple layout so on everypage you can access the Home page, the footer & the header which consists of the users log out, login & sign up.
 
 
 
@@ -151,6 +151,10 @@ Washer will get paid from stripe which is a secure payment system.
 ## 
 
 
+##### ERD
+![ERD](docs/ERD.PNG)
+
+
 ##### Describe the way tasks are allocated and tracked in your project
 
 For time management, I used note taking to make sure what I have to still implement & what is more important, Much like trello but I don't like trellos design, I would rather type notes or write them. 
@@ -167,6 +171,7 @@ Here is an example of note taking:
 - Setup of a system such as mailgun for activation features.
 - Adminstrator dashboard (owner of website)
 - Some sort of 24/7 chat robot for the website incase of any issues occur and to minimalize phone calls and implement automation.
+
  
  ##### Explain the different high-level components (abstractions) in your app
 
@@ -175,8 +180,49 @@ Here is an example of note taking:
  The application was made very simple to navigate, sign up, sign in & use.
 
 ##### Describe your projects models in terms of the relationships (active record associations)they have with each other (explain models)
+Car model: 
+The car will be cleaned by many cleaners and will be owned by one user (owner).
 
-##### Discuss the database relations to be implemented in your application( migrations & schema)
+Payment model: 
+The payment will be made by a user(owner), and will be received by cleaner.
+
+Role model:
+The role model will be apart of all users, to maintain the rolify gem.
+
+
+
+
+Users model:
+
+The user model has the devise gem enabled for registering a user (washer or owner). A user will own a car and can be a washer also. It will attach an image I.D to each user.
+
+R18 Discuss the database relations to be implemented in your application
+
+
+Car: has_many cleaners, class_name: ‘User’ to tell the car model is has multiple cleaners and that a cleaner is a user.
+belongs_to :owner (user owns car) & has_one :payment
+
+Payment: belongs_to :cleaner, class_name: ‘User’, which belongs_to :car (payment is made via car cleaned)
+
+Role: has_and_belongs_to_many :users, :join_table => :users_roles (enables rolify through all users)
+
+
+User: 
+has_many :cars, through ‘owner_id’
+has_one :cleaning_payment for one vehicle, class_name: ‘Payment’, through foreign_key:  ‘cleaner_id’
+
+
+
+has_many :cleaned payments, through: :cars, source: :payment
+ So a cleaner can clean multiple vehicles and receive multiple payments.
+
+has_one_attatched :image 
+
+All users have an attached image file.
+
+
+
+
 
 
 
