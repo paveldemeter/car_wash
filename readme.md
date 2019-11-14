@@ -152,7 +152,7 @@ Washer will get paid from stripe which is a secure payment system.
 
 
 ##### ERD
-![ERD](docs/ERD.PNG)
+![ERD](docs/erd.png)
 
 
 ##### Describe the way tasks are allocated and tracked in your project
@@ -196,7 +196,7 @@ Users model:
 
 The user model has the devise gem enabled for registering a user (washer or owner). A user will own a car and can be a washer also. It will attach an image I.D to each user.
 
-R18 Discuss the database relations to be implemented in your application
+#### Discuss the database relations to be implemented in your application
 
 
 Car: has_many cleaners, class_name: ‘User’ to tell the car model is has multiple cleaners and that a cleaner is a user.
