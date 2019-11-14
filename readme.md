@@ -168,15 +168,15 @@ Here is an example of note taking:
 - Adminstrator dashboard (owner of website)
 - Some sort of 24/7 chat robot for the website incase of any issues occur and to minimalize phone calls and implement automation.
  
- Explain the different high-level components (abstractions) in your app
+ ##### Explain the different high-level components (abstractions) in your app
 
  This application has a different components such has Bulma which is implemented styling which consists of a navigation bar, pricing table & various simple styles, The app also had a devise gem which implements users to sign in, sign up & sign out. You have the option to check a box as a washer, then you will be able to view the jobs tab.
 
  The application was made very simple to navigate, sign up, sign in & use.
 
-Describe your projects models in terms of the relationships (active record associations)they have with each other (explain models)
+##### Describe your projects models in terms of the relationships (active record associations)they have with each other (explain models)
 
-R18 Discuss the database relations to be implemented in your application( migrations & schema)
+##### Discuss the database relations to be implemented in your application( migrations & schema)
 
 
 
