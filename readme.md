@@ -24,8 +24,7 @@ From online social research I see a lot of people asking about professional deta
 > Link to GITHUB Repo & Heroku
 
 - Github https://github.com/paveldemeter/car_wash
-- Heroku
-
+- Heroku https://arcane-beach-59796.herokuapp.com/
 ## 
 ### Splash Mobile Auto Wash
 
@@ -40,7 +39,7 @@ CLOUDINARY has been implemented for a user to upload their Identification as an 
 
 ROLIFY has been implemented so an Owner cannot go under the washer tab t
 
-DEVISE has been implemented so an lorem
+DEVISE has been implemented for user control.
 
 The site has an layout so on everypage you can access the Home page, the footer & the header which consists of the users log out, login & sign up.
 
@@ -168,5 +167,16 @@ Here is an example of note taking:
 - Setup of a system such as mailgun for activation features.
 - Adminstrator dashboard (owner of website)
 - Some sort of 24/7 chat robot for the website incase of any issues occur and to minimalize phone calls and implement automation.
+ 
+ Explain the different high-level components (abstractions) in your app
+
+ This application has a different components such has Bulma which is implemented styling which consists of a navigation bar, pricing table & various simple styles, The app also had a devise gem which implements users to sign in, sign up & sign out. You have the option to check a box as a washer, then you will be able to view the jobs tab.
+
+ The application was made very simple to navigate, sign up, sign in & use.
+
+Describe your projects models in terms of the relationships (active record associations)they have with each other (explain models)
+
+R18 Discuss the database relations to be implemented in your application( migrations & schema)
+
 
 
